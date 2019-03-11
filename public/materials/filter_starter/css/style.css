@@ -1,0 +1,55 @@
+#container{
+	width: 960px;
+	margin: 0 auto;
+	float: none;
+}
+
+.mix{
+	display: none;
+}
+
+div{
+	width: 50%;
+	height: 100px;
+	float: left;
+}
+
+#one{
+	background-color: red;
+}
+
+#two{
+	background-color: orange;
+}
+
+#three{
+	background-color: yellow;
+}
+
+#four{
+	background-color: green;
+}
+
+#five{
+	background-color: blue;
+}
+
+#six{
+	background-color: purple;
+}
+
+#seven{
+	background-color: #333333;
+}
+
+#eight{
+	background-color: #666666;
+}
+
+#nine{
+	background-color: #999999;
+}
+
+#ten{
+	background-color: #CCCCCC;
+}

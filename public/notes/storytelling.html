@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>D3: Storytelling</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1 class="red">Storytelling Using D3</h1>
+					<h1></h1>
+				</section>
+
+<!-- 				<section class="hero">
+					<h1>Class <span class="red">#20</span></h1>
+					<h1>01/02/2018</h1>
+					<h1 class="lesson-title">Final Project</h1>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+			<!-- 		<p class="fragment">&#149; <a href="https://generalassemb.ly/education/data-visualization-using-d3/new-york-city/45769">Quick Announcement - D3 Meetup tonight hosted by yours truly</a></p> -->
+					<p class="fragment">&#149; <a href="#/course-recap">The Power of Storytelling</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Types of Storytelling</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Using D3 To Tell A Story</a></p>
+			<!-- 		<p class="fragment">&#149; <a href="#/certification">React's Strengths</a></p>
+					<p class="fragment">&#149; <a href="#/certification">Leveraging The Two Technologies</a></p> -->
+<!-- 					<p>&#149; <a href="#/you-and-ga">You + GA</a></p>
+					<p>&#149; <a href="#/next-steps">Next Steps</a></p>
+					<p>&#149; <a href="#/course-review">Course Review</a></p>
+					<p>&#149; <a href="#/final-presentations">Final Presentations</a></p> -->
+				</section>
+
+				<!-- COURSE RECAP -->
+<!-- 				<section class="title" id="course-recap">
+					<h1>What were trying to build...</h1>
+				</section> -->
+
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Final Build</div>
+					<p>An extended version of Mike Bostok's <a href="https://bl.ocks.org/mbostock/3808234">General Update Patterns III</a></p>
+			<iframe height='400' scrolling='no' title='D3 - Alphabet Demo - Solution' src='//codepen.io/jkeohan/embed/wWJvey/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/jkeohan/pen/wWJvey/'>D3 - Alphabet Demo - Solution</a> by Joe (<a href='https://codepen.io/jkeohan'>@jkeohan</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+				</section> -->
+
+				<section class="title" id="">
+					<h1>The Power of Storytelling</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">The Power of Storytelling</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Interactive Media</p>
+					<p class="fragment">D3 allows you to bind arbitrary data to the DOM, and then apply data-driven transformations to the document.</p>
+					<h3 class="fragment red">What does this all mean and why should you even care?</h3>
+					<p class="fragment">It can be used to create <a target="_" href="https://dc-js.github.io/dc.js/">interactive visualizations</a> but can also be a key technology used in <a target="_" href="http://nbremer.github.io/urbanization/">visual storytelling</a>.</p>
+				<!-- 	<p class="fragment">I'm assuming most people present have heard of <span class="red">REACT</span> so I don't have any slides on what React is...</p> -->
+				</section>
+
+				<section class="title" id="course-recap">
+					<h1>Types of Storytelling</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Types of Storytelling</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Data Scrolling <a target="_" href="https://github.com/d3/d3/blob/master/API.md">api calls</a> based on certain data types such as:</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/kkwNPJ?editors=0010">json</a> or <a target="_" href="https://codepen.io/jkeohan/pen/dWbmOM?editors=0010">csv</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="title" id="">
+					<h1>Building Out A Scroller</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Building Out A Scroller</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Building out a scroller will require the following:</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment">Setting up the HTML\CSS structure</li>
+							<li class="fragment">Creating a reusable scoller function</li>
+						</ul>
+					</div>
+				</section>
+
+				
+				<section class="title" id="">
+					<h1>HTML\CSS Structure</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML Structure</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Building out a scroller will require the following HTML</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment">A main div assigned and <span class="red">id</span> of <span class="red">#section</span> that will be used to hold the text portion of the interactive</li>
+							<li class="fragment">One or more nested div's assigned a <span class="red">class </span> of <span class="red">.step</span></li>
+							<li class="fragment">One div with an  <span class="red">id</span> of <span class="red">#viz</span> that is a sibling of the<span class="red">#sections</span> div</li>
+							<li>Put Image here</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="title" id="">
+					<h1>Supporting CSS</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">HTML\CSS Structure</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Building out a scroller will require the following HTML</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment">A main div assigned and <span class="red">id</span> of <span class="red">#section</span> that will be used to hold the text portion of the interactive</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="title" id="">
+					<h1>Reusable Scroller</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Reusable Scroller</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">The scroller will do the following:</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment">Given a set of <span class="red">sections</span> it will figure where these elements are located vertically down the page.</li>
+							<li class="fragment">When the page is scrolled it will figure out which of these elements is currently front-and-center in the browsers viewport.</li>
+							<li class="fragment">It will make the new section the <span class="red">active</span> element and initiate the visualization.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="title" id="">
+					<h1>Initial Setup</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Initial Setup</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">The two main data elements that we first need to grab in this project are: </p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment">The data points themselves, which we can import using the <a href="https://github.com/d3/d3-request">d3-request module</a> or the content-specific <a href="https://github.com/d3/d3-request#json">convenience constructor</a> methods such as: <span class="red">.csv(), .tsv(), .json()</span></li>
+							<li class="fragment">All of the <span class="red">.step</span> div elements which will be used to tell the story and step through the visualizations.  We can grab these elements using <a href="https://github.com/d3/d3-selection">d3.selectAll('.step')</a></li>
+						</ul>
+					</div>
+					<p class="fragment">In our example</p>
+				</section>
+
+
+				<section class="title" id="">
+					<h1>Resources</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Resources</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Below are some of the resources I used for this presentation:</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a href="http://datacandy.co.uk/scroller/index.html">Single Button Economy: Transitions for Journalistic Narratives Where the Reader Only Needs to Swipe<</a></li>
+
+							<li class="fragment"><a href="http://vallandingham.me/scroller.html">So You Want To Build A Scroller</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+

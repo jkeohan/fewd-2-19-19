@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+<!-- 		<title>FEWD: Class 03</title> -->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+		<!-- 		<section class="hero">
+					<h1>HELLO</h1>
+					<div class="opening-instructions">
+						<p>1) Please download <a href="../materials/relaxr.zip">Relaxr Starter Code</a></p>
+						<p>2) Move <code class="code">relaxr</code> into your <code class="code">homework</code> folder</p>
+					</div>
+				</section> -->
+<!-- 				<section class="hero">
+					<h1>HELLO</h1>
+					<div class="opening-instructions">
+						<p>First:</p>
+						<p class="pad-left-lg">Make sure your class work/homework from last class is pushed up to Github</a></b></p>
+						<p>Then:</p>
+						<p class="pad-left-lg">&#149; Download <a href="../materials/class03.zip">Class 03 Starter Code</a></b></p>
+						<p class="pad-left-lg">&#149; Copy the <code class="code">keanu</code> directory into your <code class="code">class-work</code> directory</p>
+					</div>
+				</section> -->
+
+				<section class="hero">
+<!-- 					<h1>Class <span class="red">#03</span></h1> -->
+					<!-- <h1>10/24/2017</h1> -->
+					<h1 class="lesson-title">CSS Basics</h1>
+				</section>
+
+				<!-- <section class="title">
+					<h1>Questions</h1>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+
+					<!-- <p>&#149; <a href="#/warmup">Warmup Exercise</a></p> -->
+					<p>&#149; Feedback\Questions </p>
+					<p>&#149; Homework Disucssion</p>
+					<p>&#149; Working with CS</p>
+				    <p>&#149; Classes and ID's</p>
+					<p>&#149; Grouping Selector</p>
+					<p>&#149; Nested Selector</p>
+				</section>
+
+<!-- 				<section class="title">
+					<h1>Questions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+
+					<p class="text-smaller"><b>Q: Text editor shortcuts:</b></p>
+					<div class="fragment text-smallest">
+						<p>A: Recommend investing a few hours becoming a power user:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <a target="_blank" href="https://generalassemb.ly/blog/sublime-text-3-tips-tricks-shortcuts/">25 tricks/shortcuts</a></p>
+							<p>&rArr; <a target="_blank" href="https://scotch.io/bar-talk/the-complete-visual-guide-to-sublime-text-3-getting-started-and-keyboard-shortcuts">Scotch.io Sublime Text Overview</a></p>
+							<p>&rArr; <a target="_blank" href="https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text">Scotch.io Atom Overview</a></p>
+						</div>
+					</div>
+					<p class="fragment text-smaller"><b>Q: Will we learn how different browsers handle HTML/CSS?</b></p>
+					<p class="fragment text-smallest">A: Not specifics, but we will cover <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">solutions</a> to normalize behavior</p>
+					<p class="fragment text-smaller"><b>Q: Will sites like SquareSpace replace the need for coding basic sites?</b></p>
+					<p class="fragment text-smallest">A: Yes and <a target="_blank" href="https://www.quora.com/Why-do-people-still-hire-web-designers-when-there-are-website-builders-out-there-such-as-WordPress-Wix-and-Weebly">no</a></p>
+				</section> -->
+
+				<!-- WARMUP (20-25mins) -->
+			<!-- 	<section class="hero" id="warmup">
+					<h1>Warmup</h1>
+				</section> -->
+
+	<!-- 			<section data-background="#FFF" class="text-left">
+					<div class="heading">Warmup</div>
+
+					<div class="text-smallest">
+						<p>1. Open <code class="code">keanu</code> in SublimeText</p>
+						<p>2. Mark up <code class="code">copy.txt</code> with HTML in <code class="code">about.html</code></p>
+						<p>3. Ensure <code class="code">about.html</code> contains proper structure:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">DOCTYPE</code></p>
+							<p>&rArr; <code class="code">html</code></p>
+							<p>&rArr; <code class="code">head</code> & <code class="code">body</code></p>
+						</div>
+						<p>4. Link the <code class="code">.html</code> files (index, about, films) together</p>
+					</div>
+				</section> -->
+
+				<section class="title" id="feedback">
+					<h1>Feedback</h1>
+				</section>
+
+<section data-background="#FFF" class="text-left">
+					<div class="heading">Feedback & Questions</div>
+  <p class="fragment"><b>Questions...</b></p>
+			      <div class="text-smallest">
+            <p class="fragment"><b>Q: When you are reviewing the Developer Tools and are checking out the style elements,  do you copy and paste that into your own code in the CSS section? </b></p>
+            <p class="fragment pad-left-lg">A: Yes...but it also gives you a chance to work with them so you can understand what they are doing.</p>
+            <p class="fragment"><b>Q: How do I find out what fonts I can use in my code?</b></p>
+            <p class="fragment pad-left-lg">A: Whatever fonts you have available by default or can import</p>
+            <p class="fragment"><b>Q: Why is the "alt" attribute empty when we type in the img src tag?</b></p>
+            <p class="fragment pad-left-lg">A: Because we opted not to type anythging in but it should contain some content</p>
+<p class="fragment"><b>Q: How do I create a list without bullets or numbers?</b></p>
+            <p class="fragment pad-left-lg">A: list-style-type:none</p>
+<p class="fragment"><b>Q: Why do background images use the url tag but img uses src?</b></p>
+            <p class="fragment pad-left-lg">A: It's just the way it is.</p>
+
+          </div>
+
+
+<!--       <p class="fragment"><b>Announcements...</b></p>
+            <div class="text-smallest">
+    <p class="fragment pad-left-lg">&#149; Several cheatsheets pinned to slack channel.</p>
+            </div> -->
+				</section>
+
+
+<section data-background="#FFF" class="text-left">
+					<div class="heading">Feedback & Questions</div>
+  <p class="fragment"><b>Feedback..</b></p>
+            <div class="text-smallest">
+    <p class="fragment pad-left-lg">&#149; I still feel like the Emmet shortcuts are slowing me down for now only because I don't know them yet.</p>
+    <p class="fragment pad-left-lg">&#149; I had a better grasp of the material today, getting excited to learn more</p>
+       <p class="fragment pad-left-lg">&#149; I wish this class was 3 hours longer :</p>
+       <p class="fragment pad-left-lg">&#149; I love the shortcuts for creating code, but it's a bit hard to remember.</p>
+            </div>
+
+<!--       <p class="fragment"><b>Announcements...</b></p>
+            <div class="text-smallest">
+    <p class="fragment pad-left-lg">&#149; Several cheatsheets pinned to slack channel.</p>
+            </div> -->
+				</section>
+
+
+			<section class="title" id="homework">
+					<h1>Homework Disucssion</h1>
+				</section>
+
+			<section data-background="#FFF" class="text-left">
+					<div class="heading">Activty: Talk and Turn - 10min</div>
+					<div class="text-smaller">
+						<p class="fragment">&#149; Choose a neighbor to be your partner</p>
+						<p class="fragment"> &#149;Open one of the press release designs that you attempted to reproduce</p>
+						<p class="fragment"> &#149; Do the following:</p>
+						<ul class="pad-left-lg">
+							<li class="fragment "> Explain to your neighbor at least one thing you already knew and could implement.</li>
+							<li class="fragment"> Talk about one thing that you discovered from trying to rebuild the site and how you and how you think you can reapply it</li>
+						</ul>
+						<p class="fragment"> &#149;We will spend a few minutes and discuss your findings</p>
+					</div>
+				</section>
+
+		<!-- 		<section class="title" id="css-intro">
+					<h1>How The Internet Works...</h1>
+					<p class="fragment">In 10min...or less</p>
+				</section> -->
+				<section class="title" id="warmup">
+					<h1>Warmup</h1>
+				</section>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CodeAlong: 5min</div>
+					<p class="fragment">&#149; Open the following Codepen (instructor will provide)</p>
+					<p class="fragment">&#149; Let's walk through the instructions together.</p>
+				</section>
+
+				<!-- CSS INTRO -->
+				<section class="title" id="css-intro">
+					<h1>CSS Basics</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS: History</div>
+
+					<div class="text-smaller">
+						<p>&#149; CSS => Cascading Style Sheets</p>
+						<!-- <p class="fragment">&#149; First proposed in 1994 by H&aring;kon Lie ("How Con Lee") - a colleague of Tim Berners-Lee</p> -->
+						<p class="fragment">&#149; Stylesheet language used to describe HTML markup</p>
+						<p class="fragment">&#149; Allows separation of document content (HTML), from document styling (CSS)</p>
+						<p class="pad-left-lg fragment">&rArr; "Separation of concerns"</p>
+			<!-- 			<p class="fragment">&#149; Start a new <a href="http://codepen.io" target="_blank">CodePen</a></p> -->
+					</div>
+				</section>
+
+	<!-- 			<section data-background="#FFF" class="text-left">
+					<div class="heading">Prep For CodeAlong</div>
+					<p class="fragment text-smallest">&#149; Fork the following CodePen: <a target="_" href="https://codepen.io/jkeohan/pen/yqomxM?editors=0010">FEWD - Class03 - CSS Basics</a></p>
+					<p class="fragment text-smallest">&#149; Instructor will show what were trying to reproduce by applying css, classes and id's</p>
+				</section> -->
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS: Syntax</div>
+					<div class="text-center">
+						<img src="img/class03/css-syntax.png">
+					</div>
+					<p class="fragment text-smallest">&#149; This CSS rule turns the text color of every paragraph, <code class="code">&lt;p&gt;</code>, black</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS: Syntax (ctn)</div>
+					<div class="text-center">
+						<img src="img/class03/css-syntax-multiple.png">
+					</div>
+					<p>&#149; One selector can have multiple declarations</p>
+					<p>&#149; Common for each declaration to have its own line</p>
+				</section>
+
+				<!-- WORKING WITH CSS -->
+				<section class="title" id="working-with-css">
+					<h1>Applying CSS</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Applying CSS</div>
+
+					<p>&#149; Three ways to apply CSS to HTML:</p>
+					<div class="pad-left-lg">
+						<p class="fragment">1) Inline CSS</p>
+						<p class="fragment">2) Embed in HTML using a <code class="code">&lt;style&gt;</code> tag</p>
+						<p class="fragment">3) Link to an external file using the <code class="code">&lt;link&gt;</code> tag</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Inline CSS</div>
+
+					<div class="text-smallest">
+<pre><code>
+	&lt;p style="color: blue; font-size: 14px;">
+	  Keanu Reeves is Johnny Utah
+	&lt;/p>
+
+	&lt;p style="color: blue; text-decoration: underline;">
+	  Or is Johnny Utah Keanu Reeves?
+	&lt;/p>
+
+</code></pre>
+						<p class="fragment">&#149; Not a good practice</p>
+						<p class="fragment">&#149; Does not separate our concerns (HTML/CSS)</p>
+						<p class="fragment">&#149; Makes debugging difficult</p>
+						<p class="fragment">&#149; ONLY USE IF WRITING HTML EMAILS</p>
+						<p class="fragment">&#149; You will make enemies</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<h1>Do NOT Use Inline CSS!</h1>
+					<img src="img/class03/inline-css.jpeg">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading"><code class="code lower">&lt;head&gt;</code> embed</div>
+
+					<div class="text-smallest">
+<pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title>Super Awesome Website&lt;/title>
+	  &lt;style type="text/css">
+	    h1 {color: red;}
+	    p {color: blue; font-size: 14px}
+	  &lt;/style>
+	&lt;/head&gt;
+	&lt;body&gt;
+	  ...
+
+</code></pre>
+						<p>&#149; Better than inline styles, as styles share same location</p>
+						<p>&#149; Bloats HTML pages</p>
+						<p>&#149; Can make debugging large applications difficult</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">External CSS</div>
+
+					<div class="text-smaller">
+<pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title>Super Awesome Website&lt;/title>
+ 	  &lt;link rel="stylesheet" type="text/css" href="style.css">
+	&lt;/head&gt;
+	&lt;body&gt;
+	  ...
+
+</code></pre>
+						<p>&#149; Like <code class="code">&lt;title&gt;</code>, placed within <code class="code">&lt;head&gt;</code></p>
+						<p>&#149; Truly separates HTML from CSS</p>
+						<p>&#149; Easiest to debug; just go to your CSS file!</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">External CSS</div>
+
+<pre><code>
+     &lt;link rel="stylesheet" type="text/css" href="style.css">
+
+</code></pre>
+
+					<div class="text-left text-smallest">
+						<div class="fragment">
+							<p>&#149; <code class="code">rel</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Specifies the relationship between the current document and the linked document</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; <code class="code">type</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Specifies the media type of the linked document</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; <code class="code">href</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Specifies the location of the linked document</p>
+						</div>
+					</div>
+				</section>
+
+	<!-- CLASSES AND ID'S -->
+				<section class="center">
+					<p>I have multiple <code class="code">&lt;p&gt;</code> tags.</p>
+					<p>How do I style each differently?</p>
+				</section>
+
+				<section class="title" id="classes-ids">
+					<h1>Classes and ID's</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Applying Element ID's</div>
+
+					<div class="text-smallest">
+						<p class="fragment">&#149; ID's are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">attributes</a> (additional data that specify element behavior)</p>
+						<p class="fragment">&#149; Assigned to only <u>one</u> HTML element per page (app)</p>
+						<p class="fragment">&#149; Identify the element for styling/scripting</p>
+						<div class="fragment">
+							<p>&#149; Cannot contain spaces</p>
+<pre><code>
+	// DO NOT DO THIS
+	&lt;p id="important title">Hello, World!&lt;/p>
+
+	// DO THIS
+	&lt;p id="important-title">Hello, World!&lt;/p>
+
+</code></pre>
+						</div>
+						<p class="fragment">&#149; Convention is to use the dash (<code class="code">-</code>) as the delimiter</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Targeting Element ID's</div>
+
+					<div class="text-smallest">
+					<p>&#149; To style the following ID:</p>
+<pre><code>
+	&lt;p id="important-title">Hello, World!&lt;/p>
+
+</code></pre>
+					<div class="fragment">
+						<p>&#149; Use <code class="code">#</code> + the ID's name:</p>
+<pre><code>
+	#important-title {
+	  color: red;
+	}
+
+</code></pre>
+					<!-- <p>
+						&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VvBZQB?editors=110">CodePen Exercise</a>
+					</p> -->
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Applying Element Classes</div>
+
+					<div class="text-smaller">
+						<p>&#149; Classes are also attributes</p>
+						<p class="fragment">&#149; Assigned to <u>multiple</u> HTML elements per page</p>
+						<p class="fragment">&#149; Identifies the elements for styling/scripting</p>
+						<div class="fragment">
+							<p>&#149; Like the <code class="code">id</code> attribute, <code class="code">class</code> cannot contain spaces</p>
+<pre><code>
+	&lt;p class="hello">Hello, World!&lt;/p&gt;
+
+	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
+
+	&lt;p class="hello">Hello, Jupiter!&lt;/p&gt;
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Targeting Element Classes</div>
+
+					<div class="text-smallest">
+						<p>&#149; To style the following classes:</p>
+<pre><code>
+	&lt;p class="hello">Hello, World!&lt;/p&gt;
+	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; Use <code class="code">.</code> + the class's name:</p>
+<pre><code>
+	.hello {
+	  color: pink;
+	}
+
+</code></pre>
+						</div>
+						<div class="fragment">
+							<p>&#149; Elements can have more than one class:</p>
+<pre><code>
+	&lt;p class="push-left text-smaller">Hello, World!&lt;/p&gt;
+
+</code></pre>
+						</div>
+				<!-- 		<p class="fragment">&#149; Add HTML classes to the previous <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VvBZQB?editors=110">CodePen</a></p> -->
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">ID's vs. Classes</div>
+
+					<div class="text-smaller">
+						<p>&#149; General rule:</p>
+						<div class="pad-left-lg">
+							<p>&rArr; Use <code class="code">id</code> when you are styling <u>ONE</u> specific element</p>
+							<p>&rArr; Use a <code class="code">class</code> when you are styling a <u>GROUP</u> of elements</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; Note:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; Elements cannot have more than one ID...or can they?</p>
+								<p>&rArr; Elements can have multiple classes</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab: Applying Basic CSS and Using Classes - 20min</div>
+					<div class="text-smaller">
+						<p>1. Open the following CodePen (instructor will provide link)</p>
+						<p class="fragment">2. In the CSS section of the CodePen you will find the steps needed to apply styling to the content to reproduce what is seen in the image.</p>
+						<p class="fragment">3. Take 2 min to review the steps and afterwards I we will ONLY begin after I have fielded no less then 3 questions from the class as a whole.</p>
+					</div>
+				</section>
+
+				<!-- GROUPING SELECTORS -->
+				<section class="title" id="grouping-selectors">
+					<h1>Grouping Selectors</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Grouping Selectors</div>
+
+					<div class="text-smaller">
+						<p>Is there anything wrong with this CSS:</p>
+<pre><code>
+	h2 {
+	  color: red;
+	}
+
+	.some-class {
+	  color: red;
+	}
+
+	#some-title {
+	  color: red;
+	}
+
+</code></pre>
+						<p class="fragment">No - nothing is wrong! However, is anything being repeated?</p>
+					</div>
+				</section>
+
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Grouping Selectors</div>
+
+					<p>&#149; Give the same properties to a series of selectors without repeating CSS rules</p>
+					<div class="fragment">
+						<p>&#149; Group selectors using a comma separator:</p>
+<pre><code>
+	h2, .some-class, #some-id {
+	    color: red;
+	}
+
+</code></pre>
+					</div>
+			<!-- 		<p class="fragment">&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoPZYz?editors=110">CodePen Exercise</a></p> -->
+				</section>
+
+
+
+				<!-- NESTING SELECTORS -->
+				<section class="title" id="nested-selectors">
+					<h1>Nested Selectors</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Nested Selectors</div>
+
+					<div class="text-smallest">
+						<p>&#149; CSS selectors can contain more than one selector</p>
+						<p>&#149; More complicated selectors => targeted styles</p>
+						<div class="fragment">
+							<p>&#149; Child selector:</p>
+<pre><code>
+	#some-id p {
+	  color: red;
+	}
+
+</code></pre>
+						</div>
+						<p class="fragment">&#149; This will target <code class="code">&lt;p&gt;</code> tags inside of the element with <code class="code">id="some-id"</code></p>
+						<p class="fragment">&#149; <code class="code">&lt;p&gt;</code> tags outside of <code class="code">some-id</code> will <u>not</u> share this style</p>
+		<!-- 				<p class="fragment">&#149; <a href="http://codepen.io/cheshireoctopus/pen/ZpXrqW?editors=1100#0" target="_blank">Example</a></p> -->
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Nested Selectors: Examples</div>
+
+					<div class="text-smallest">
+						<div class="fragment">
+<pre><code>
+	p a {
+	  color: black;
+	}
+
+</code></pre>
+						</div>
+						<div class="fragment">
+<pre><code>
+	#some-id p a {
+	  color: red;
+	}
+
+</code></pre>
+						</div>
+						<div class="fragment">
+<pre><code>
+	p .some-class, p #some-id {
+	  color: blue;
+	}
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+			<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab: Nested Selectors</div>
+					<div class="text-smaller">
+						<p>1. Open the following CodePen (instructor will provide link)</p>
+					</div>
+				</section>
+
+<!-- 
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">LAB: Begin Homework Assignment</div>
+					<div class="text-smaller">
+						<p>1. Work on reproducing the  <a target="_" href="http://pr-better.surge.sh/">GA Press - Better </a>version</p>
+						<p>2. Use Dev Tools to examine the code and Emmet to reproduce the HTML structure</p>
+						<p>3. Examine the CSS and try to apply those settings to the appropriate elements. </p>
+					</div>
+				</section> -->
+
+				<section class="center">
+					<h1>FIN</h1>
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+                    <h4>Class #04 (of 20) - Intermediate CSS</h4>
+					<!-- <p>&#149; Nested and grouped CSS selectors</p> -->
+					  <li>Color, Font, and Text Properties</li>
+					<p>&#149; The Box Model: <code class="code">padding</code>, <code class="code">border</code>, and <code class="code">margin</code></p>
+			<!-- 		<p>&#149; Identifying specific elements using <code class="code">class</code> and <code class="code">id</code></p> -->
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

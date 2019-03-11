@@ -1,0 +1,53 @@
+#container{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div{
+	height: 1000px;
+}
+
+nav{
+	height: 50px;
+	background-color: orange;
+	position: fixed;
+	width: 960px;
+	/*top: 0;
+	left: 0;*/
+}
+
+nav li a{
+	display: block;
+	float: left;
+	padding: 0 15px;
+	height: 50px;
+	line-height: 50px;
+	color: gray;
+	text-decoration: none;
+}
+
+#home{
+	background-color: #ABCDEF;
+}
+
+#about{
+	background-color: #777777;
+}
+
+#contact{
+	background-color: #333333;
+}
+
+#products{
+	background-color: #CCCCCC;
+}
+
+h2{
+	line-height: 150px;
+	color: orange;
+	font-size: 48px;
+	text-shadow: 1px 1px 2px black;
+}
+
+

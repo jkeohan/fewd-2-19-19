@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 20</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1 class="red">D3 & React</h1>
+					<h1></h1>
+				</section>
+
+<!-- 				<section class="hero">
+					<h1>Class <span class="red">#20</span></h1>
+					<h1>01/02/2018</h1>
+					<h1 class="lesson-title">Final Project</h1>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+			<!-- 		<p class="fragment">&#149; <a href="https://generalassemb.ly/education/data-visualization-using-d3/new-york-city/45769">Quick Announcement - D3 Meetup tonight hosted by yours truly</a></p> -->
+					<p class="fragment">&#149; <a href="#/course-recap">What is D3?</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">D3's Strengths</a></p>
+					<p class="fragment">&#149; <a href="#/certification">React's Strengths</a></p>
+					<p class="fragment">&#149; <a href="#/certification">Leveraging The Two Technologies</a></p>
+<!-- 					<p>&#149; <a href="#/you-and-ga">You + GA</a></p>
+					<p>&#149; <a href="#/next-steps">Next Steps</a></p>
+					<p>&#149; <a href="#/course-review">Course Review</a></p>
+					<p>&#149; <a href="#/final-presentations">Final Presentations</a></p> -->
+				</section>
+
+				<!-- COURSE RECAP -->
+<!-- 				<section class="title" id="course-recap">
+					<h1>What were trying to build...</h1>
+				</section> -->
+
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Final Build</div>
+					<p>An extended version of Mike Bostok's <a href="https://bl.ocks.org/mbostock/3808234">General Update Patterns III</a></p>
+			<iframe height='400' scrolling='no' title='D3 - Alphabet Demo - Solution' src='//codepen.io/jkeohan/embed/wWJvey/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/jkeohan/pen/wWJvey/'>D3 - Alphabet Demo - Solution</a> by Joe (<a href='https://codepen.io/jkeohan'>@jkeohan</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+				</section> -->
+
+				<section class="title" id="">
+					<h1>What is D3?</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">D3 is...</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">A Javascript library created by <a href="https://d3js.org/">Mike Bostok</a> for manipulating documents based on data.</p>
+					<p class="fragment">D3 allows you to bind arbitrary data to the DOM, and then apply data-driven transformations to the document.</p>
+					<h3 class="fragment red">What does this all mean and why should you even care?</h3>
+					<p class="fragment">It can be used to create <a target="_" href="https://dc-js.github.io/dc.js/">interactive visualizations</a> but can also be a key technology used in <a target="_" href="http://nbremer.github.io/urbanization/">visual storytelling</a>.</p>
+				<!-- 	<p class="fragment">I'm assuming most people present have heard of <span class="red">REACT</span> so I don't have any slides on what React is...</p> -->
+				</section>
+
+				<section class="title" id="course-recap">
+					<h1>D3's Strengths</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What Are D3's Strengths?</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">The ability to make <a target="_" href="https://github.com/d3/d3/blob/master/API.md">api calls</a> based on certain data types such as:</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/kkwNPJ?editors=0010">json</a> or <a target="_" href="https://codepen.io/jkeohan/pen/dWbmOM?editors=0010">csv</a></li>
+						</ul>
+					</div>
+					<p class="fragment">Provides methods for computing basic summary statistics such as: </p>
+						<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a href="https://github.com/d3/d3/blob/master/API.md">d3.min, d3.max, d3.extent</a></li>
+						</ul>
+					</div>
+							<p class="fragment">Additional methods for grouping data: </p>
+						<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/dWbmOM?editors=0010">d3.nest</a></li>
+						</ul>
+					</div>
+					<p class="fragment">It comes with predefined layouts, projections, generators, ect.</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://bl.ocks.org/mbostock/4183330">d3.geo</a></li>
+						</ul>
+					</div>
+					<p class="fragment">But one of it's major strengths is using <span class="red">Data Binding</span> and the <span class="red">Enter\Update\Exit</span> methods to keep track of the state of the data....more on this later...</p>
+				</section>
+
+				<section class="title" id="">
+					<h1>React's Strengths</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What Are React's Strengths?</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Breaking down an app into components.</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/OzBZGN?editors=0010">TicTacToe</a></li>
+						</ul>
+					</div>
+					<p class="fragment">Standard lifecycle methods are used to control the flow of code execution. </p>
+						<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/VyEdBj?editors=0010">ComponentDidMount</a> or ComponentDidUpdate</li>
+						</ul>
+					</div>
+					<p class="fragment">Animation Lifecycle methods can be use used to emulate D3's Enter\Update\Exit </p>
+						<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/VyGLOM?editors=1010">ComponentWillEnter</a> or ComponentWillLeave</li>
+						</ul>
+					</div>
+							<p class="fragment">But it's real performance gain comes from managing the DOM via the Virutal DOM</p>
+				</section>
+
+					<section class="title" id="">
+					<h1>Leveraging The Two Technologies</h1>
+				</section>
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">The Best Of Both Worlds...</div>
+					<!-- <div class="pad-left-lg"> -->
+					<h3 class="fragment">D3</h3>
+					<p class="fragment">Using D3's scaling methods such as <a target="_" href="https://codepen.io/jkeohan/pen/VMxKMQ?editors=1010">.ordinal() or .linear()</a></p>
+					<p class="fragment">Using D3's <a target="_" href="https://codepen.io/jkeohan/pen/VMxKMQ?editors=1010">Data Binding and Enter\Update\Exit</a> to add\remove\update data.</p>
+					<h3 class="fragment">React</h3>
+					<p class="fragment">Break down a data visualization into components.</p>
+					<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/VMxKMQ?editors=1010">Single Chart Component</a></li>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/VyGLOM?editors=1010">Multiple Components</a></li>
+						</ul>
+					</div>
+					<p class="fragment">Leverage Lifecycle methods to draw and redraw dataviz based on changes to dataset.</p>
+						<div class="pad-left-lg">
+						<ul>
+							<li class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/VMxKMQ?editors=1010">ComponentDidMount \ ComponentDidUpdate</a></li>
+						</ul>
+					</div>
+					<p class="fragment">Incorporate <a target="_" href="https://codepen.io/jkeohan/pen/VyGLOM?editors=1010">ReactAnimationGroup</a> and emulate D3's Enter\Update\Exit functionality</p>
+				</section>
+
+					<section class="title" id="">
+					<h1>The End....</h1>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+

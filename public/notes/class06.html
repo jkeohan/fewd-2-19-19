@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 06</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<!-- 				<section class="hero condensed">
+					<h1>HELLO</h1>
+
+					<div class="opening-instructions">
+						<div class="text-smaller">
+							<p>1) Please download <a href="../materials/fashion-blog.zip">Class 06 Homework</a></p>
+							<p>2) Move the following into your <code class="code">homework</code> directory:</p>
+							<p class="pad-left-lg"> &rArr; <code class="code">fashion-blog</code>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="hero condensed">
+					<h1>Class <span class="red">#06</span></h1>
+<!-- 					<h1>11/2/2017</h1> -->
+					<h1 class="lesson-title">Page Layout: Floats and Clears</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Annoucements</div>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; First deliverable due Tuesday, Nov 7th</p>
+						<p>&rArr; Project proposal/ideas</p>
+					</div>
+				</section> -->
+
+				<!-- QUESTIONS -->
+				<section class="title">
+					<h1>Questions</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Questions</div>
+
+				<p class="text-smaller"><b>Q: Can we go over targeting certain sections?</b></p>
+				<p class="text-smaller fragment"><b>Q: How do I target multiple sections in CSS.  </b></p>
+				<p class="text-smaller fragment"><b>Q: I'm still not really sure when we use a class and when we don't.</b></p>
+				<p class="fragment text-smallest pad-left-lg">A: Yes...We will spend additional time today/future reinforcing using Classes/ID's and semantic/non-semantic elements in our design approach.</p>
+					
+					<p class="text-smaller fragment"><b>Q: I'm good with the Nav, but I am still trying to figure out how to tell what "px amount" to use for the padding and margins. </b></p>
+					<p class="text-smallest fragment pad-left-lg">A: There are several use cases for when to use margin and/or padding.  I've linked an article that covers several of them and we will use that as our guideline as well. </p>
+		
+						<p class="text-smaller fragment"><b>Q: What else can line height do, how does it compare to others (i.e. padding, margin) </b></p>
+					<p class="text-smallest fragment pad-left-lg">A: It's used for setting standard line height in text but also to vertically center a single element containing text. </p>
+				</section>
+
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+	<p>&#149; <a href="#/relaxr">Relaxr Homework Review</a></p>
+		<p>&#149; <a href="#/di-nav">Display-Inline Nav Review</a></p>
+				<!-- 	<p>&#149; <a href="#/pseudo-classes">Pseudo Class Selectors</a></p> -->
+					<p>&#149; <a href="#/float">CSS <code class="code">float</code> property</a></p>
+					<p>&#149; <a href="#/clear">CSS <code class="code">clear</code> property</a></p>
+				</section>
+
+				<!-- WARMUP -->
+				<!-- <section data-background="#FFF" class="text-left">
+					<div class="heading">Warmup</div>
+
+					<p>1) Open <code class="code">relative-path-practice</code> in SublimeText</p>
+					<p>2) Fix the four relative image paths:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; One is in <code class="code">index.html</code></p>
+						<p>&rArr; Three are in <code class="code">css/main.css</code></p>
+					</div>
+				</section> -->
+
+				<!-- PSEUDO CLASSES SELECTORS -->
+	<!-- 			<section class="title" id="pseudo-classes">
+					<h1>Pseudo Class Selectors</h1>
+				</section>
+ -->
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Class Selectors</div>
+					<div class="text-smaller">
+						<p>&#149; Pseudo class selectors allow styling given an element's state</p>
+						<div class="fragment">
+							<p>&#149; An <code class="code">&lt;a&gt;</code> tag has the following available pseudo classes:</p>
+							<div class="pad-left-lg">
+								<p>&rArr; Unvisited (normal)</p>
+								<p>&rArr; Visited</p>
+								<p>&rArr; Hovered</p>
+								<p>&rArr; Active</p>
+							</div>
+						</div>
+						<p class="fragment">&#149; The <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">order</a> in which they are referenced in CSS is also muy importante</p>
+					</div>
+				</section> -->
+
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Pseudo Class Selectors</div>
+					<div class="text-smallest">
+						<p>&#149; Pseudo class selectors are applied using the <code class="code">:</code></p>
+<pre><code>
+	SELECTOR:PSEUDO_CLASS {
+	  ...styles
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; Pseudo selectors work with id, class, and element selectors:</p>
+<pre><code>
+	a:hover {
+	  color: green;
+	}
+
+	.nav-link:visited {
+	  color: pink;
+	}
+
+	#home-link:active {
+  	  color: orange;
+	}
+
+</code></pre>
+						</div>
+					</div>
+				</section> -->
+
+
+				<section class="title" id="relaxr">
+					<h1>Relaxr Homework Review</h1>
+				</section>
+
+				<section class="title" id="di-nav">
+					<h1>Display-Inline Nav Review</h1>
+				</section>
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Display-Inline Review</div>
+
+					<p>&#149; Let's recreate the nav in this <a target="_" href="https://codepen.io/jkeohan/pen/qVEzKX?editors=1000">CodePen</a> using display-inline</p>
+				</section>
+
+				<!-- FLOATS -->
+				<section class="title" id="float">
+					<h1>Floats</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats</div>
+
+					<p>&#149; CSS positioning property; ex: <code class="code">float: left;</code></p>
+					<p>&#149; Enables more robust web layouts</p>
+					<p>&#149; Derived from text wrapping in print:</p>
+					<div class="text-center">
+						<img src="img/class06/text-wrap.png">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats</div>
+
+					<p>&#149; Applied as follows:</p>
+<pre><code>
+	img {
+	  float: left;
+	}
+
+</code></pre>
+					<p class="fragment">&#149; Valid values: <code class="code">left</code>, <code class="code">right</code>, <code class="code">none</code></p>
+					<p class="fragment">&#149; Original purpose: allow text to "wrap" around images</p>
+					<p class="fragment">&#149; Has become: a technique for advanced web layouts</p>
+					<p class="fragment">&#149; Enables <code class="code">block</code> elements to render <code class="code">inline</code></p>
+				</section>
+
+<!-- 				<section class="center">
+					<h2>Floats + Layout</h2>
+					<img src="img/class06/float-layout.jpg" alt="">
+					<p><a target="_blank" href="https://codepen.io/jkeohan/pen/QOydQV?editors=1100">CodePen Example</a></p>
+				</section> -->
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Floats: Some Rules...</div>
+
+					<div class="text-left text-smaller">
+						<p>1) A floated element should always have a <code class="code">width</code>; otherwise it will collapse to the width of its content:</p>
+				<!-- 		<p class="pad-left-lg"> &rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQajX?editors=110">Example</a></p> -->
+						<div class="fragment">
+							<p>2) A floated box will shift until it touches either the edge of its parent, or the edge of another floated box</p>
+						<!-- 	<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/gaQpXX?editors=110">Example</a></p> -->
+						</div>
+						<div class="fragment">
+							<p>3) Elements below a floated element will slide up "behind" it; to fix this, we need to <code class="code">clear</code> the float</p>
+					<!-- 		<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoGNdY?editors=110">Example</a></p> -->
+						</div>
+
+						<p class="fragment"><a target="_" href="https://codepen.io/jkeohan/pen/bYEejK">Print Media Demo</a></p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">LAB: Working With FLoats: 30min</div>					
+					<p class="fragment">Work on the following Exercises</p>
+					<p class="fragment">1) <a target="_" href="https://codepen.io/jkeohan/pen/bYEejK">Print Media - Starter</a></p>
+					<p class="fragment">2) <a target="_" href="https://codepen.io/jkeohan/pen/ZaQpde?editors=1100">Custom List</a></p>
+	<!-- 				<p class="fragment">BONUS: Recreate <a target="_" href="				https://codepen.io/jkeohan/pen/qVEzKX?editors=1100">Custom List</a> and use floats instead of inline-block</p> -->
+	
+			<!-- 		<p>BONUS: after completing the previous labs try your hand that reproducing the image in this <a target="_" href="https://codepen.io/jkeohan/pen/mqVWbX?editors=1010">CODEPEN</a></p> -->
+					
+				</section>
+
+				<section class="title" id="clear">
+					<h1>Clearing Floats</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clearing Floats</div>
+
+					<div class="text-left text-smaller">
+						<p>&#149; Floated objects do not add height to their containing objects; this creates two problems:</p>
+						<div class="pad-left-lg">
+							<p>1) Objects further down the page will render incorrectly</p>
+							<p>2) If a parent eleent contains floated objects it will collapse on itself.
+							<!--  <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQaEx?editors=110">collapse</a> -->
+							</p>
+						</div>
+						<p class="fragment">&#149; To solve these issues, we must handle or <u>clear</u> floated elements</p>
+						<div class="fragment">
+							<p>&#149; Three methods:</p>
+							<div class="pad-left-lg">
+								<p>1) <code class="code">overflow: hidden;</code></p>
+								<p>2) The <code class="code">clear</code> CSS property</p>
+								<p>3) The "clearfix"</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Handling Floats: The Overflow Method</div>
+
+					<p>&#149; Add the following to the <u>collapsed</u> element:</p>
+					<p class="pad-left-lg"><code class="code">overflow: hidden;</code></p>
+					<p>&#149; Tells the browser to pay attention to the height of the content</p>
+					<p class="fragment">&#149; Technically isn't clearing...a parent cannot clear its children's floats</p>
+					<p class="fragment">&#149; Establishes a new block formatting context</p>
+		
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clearing Floats: The Clear Class</div>
+
+					<div class="text-smaller">
+						<p>1) Define the following in your CSS:</p>
+<pre><code>
+	.clear {
+	  clear: both;
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>2) Create the following element in your HTML; place it <u>AFTER</u> the floated elements</p>
+<pre><code>
+    &lt;div id="floated-right">&lt;/div>
+    &lt;div id="floated-left">&lt;/div>
+    &lt;div class="clear">&lt;/div>
+
+</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Clearing Floats: The Clearfix Class</div>
+
+					<p>&#149; Define the following in your CSS:</p>
+<pre><code>
+	.clearfix:after {
+	  content:"";
+	  display:table;
+	  clear:both;
+	}
+
+</code></pre>
+					<p>&#149; Add the class to the element that has collapsed</p>
+					<p>&#149; <a target="_blank" href="https://css-tricks.com/snippets/css/clear-fix/">Source</a></p>
+				</section>
+
+				<!-- FLOATING SECTION CODEALONG -->
+				<section class="center">
+					<h1>Floats/Clears Codealong</h1>
+					<p>Open <a href="https://codepen.io/jkeohan/pen/QOydQV?editors=1100">Floating Sections CodePen</a></p>
+				</section>
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Layouts Designs Using Floats - Lab</div>
+
+					<p>&#149; Open 	<a target="_" href="https://github.com/jkeohan/fewd-class-repo/blob/master/layout_challenge/layout_challenge.pdf">layout-challenge.pdf</a> file</p>
+					<p>&#149; Lets work through the first few designs</p>
+				</section>
+<!-- 
+				<section data-background="#FFF" class="text-left" id="startup-matchmaker-lab">
+					<div class="heading">Layouts Lab</div>
+
+					<p>&#149; Open <code class="code">layout-challenge</code> folder in SublimeText</p>
+					<p>&#149; Build what you see in <code class="code">spec.png</code></p>
+					<p>&#149; Styling help can be found in <code class="code">readme.txt</code></p>
+					<p>&#149; Will have to research the following CSS properties:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">background-position</code></p>
+						<p>&rArr; <code class="code">border-radius</code> (rounded corners)</p>
+						<p>&rArr; <code class="code">rgba</code> color values (used for opacity)</p>
+					</div>
+				</section> -->
+
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Lab/HW: Fashion Blog</div>					
+					<p>1) Open <code class="code">fashion-blog</code> in SublimeText</p>
+					<p>2) Build what you see in <code class="code">design.png</code></p>
+					<p>3) Copy found in <code class="code">copy.txt</code></p></p>
+
+					<p>Use the following <a href="https://codepen.io/jkeohan/pen/ZaQKya">fashion-blog</a> codepen as your starting point and when complete copy all content sublime text, commit your changes and push to your repo.</p>
+				</section> -->
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #7 (of 20) - Page Layout: Lab</h4>
+
+					<p>&#149; Floats/Clear review</p>
+					<p>&#149; Layout lab</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

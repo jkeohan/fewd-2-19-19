@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>FEWD: Class 04</title>
+<!-- 		<title>FEWD: Class 04</title> -->
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
@@ -14,280 +14,346 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section class="hero">
+<!-- 		<section class="hero">
 					<h1>HELLO</h1>
 					<div class="opening-instructions">
-						<p>1) Please download <a href="../materials/class04.zip">Class 04 Starter Code</a></p>
-						<p>2) Move <code class="code">travel-bucket-list</code> into your <code class="code">homework</code> folder</p>
+						<p>1) Please download <a href="../materials/relaxr.zip">Relaxr Starter Code</a></p>
+						<p>2) Move <code class="code">relaxr</code> into your <code class="code">homework</code> folder</p>
+					
 					</div>
-				</section>
+				</section> -->
 
 				<section class="hero condensed">
-					<h1>Class <span class="red">#04</span></h1>
-					<h1>10/26/2017</h1>
-					<h1 class="lesson-title">CSS Selectors, Box Model, & the display property</h1>
+<!-- 					<h1>Class <span class="red">#04</span></h1> -->
+		<!-- 			<h1>10/26/2017</h1> -->
+					<h1 class="lesson-title">Colors/Fonts, Box Model, & the display property</h1>
 				</section>
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Agenda</div>
-
-					<p>&#149; <a href="#/classes-ids">Classes and ID's</a></p>
-					<p>&#149; <a href="#/grouping-selectors">Grouping Selectors</a></p>
-					<p>&#149; <a href="#/nested-selectors">Nested Selectors</a></p>
-					<p>&#149; <a href="#/the-box-model">The Box Model</a></p>
-					<p>&#149; <a href="#/the-display-property">The Display Property</a>: <code class="code">block</code> vs. <code class="code">inline</code></p>
-					<p>&#149; <a href="#/span-div"><code class="code">&lt;span&gt;</code> and <code class="code">&lt;div&gt;</code></a></p>
+					<p>&#149; Feedback\Questions</p>
+					<p>&#149; Colors & Font</p>
+					<p>&#149; The Box Model</p>
+				<!-- 	<p>&#149; The Display Property: <code class="code">block</code> vs. <code class="code">inline</code></p>
+					<p>&#149; <code class="code">&lt;span&gt;</code> and <code class="code">&lt;div&gt;</code></p> -->
 				</section>
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Announcements</div>
-					<p>&#149; Three more weeks until final-project ideas are due!</p>
-					<p>&#149; We need to plan a class happy hour:</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Class 05: Mon, 10/02</p>
-						<p>&rArr; Class 06: Wed, 10/04</p>
-						<p>&rArr; Class 07: Wed, 10/11</p>
-					</div>
+					<p class="fragment">&#149; Three more weeks until final-project deliverables are due!</p>
+					<p class="fragment">&#149; Start putting together a collection of sites that include designs/functionality that you wish to incorporate into your project.</p>
+	
+			</section>
+<section data-background="#FFF" class="text-left">
+					<div class="heading" id="feedback">Feedback & Questions</div>
+  <p class="fragment"><b>Questions...</b></p>
+			      <div class="text-smallest pad-left-lg">
+            <p class="fragment"><b>Q: what are common ways that ID tags are used in real world scenarios? </b></p>
+            <p class="fragment"><b>Q: When is it required for a coder to use id's and is there several or specific ways it could be done?</b></p>
+             <p class="fragment"><b>Q: What is the benefit to using an id rather than a class that is only called once?</b></p>
+            <p class="fragment pad-left-lg">A: They are meant to target specific elements for the intent of CSS of via JavaScript </p>
+           
+            <p class="fragment"><b>Q: When you are styling an ID in CSS and it's nested in a div, is it considered more specific if you write DIV#example, or does it not matter since ID's are unique anyway?</b></p>
+            <p class="fragment pad-left-lg">A: They are unique but the path may belp indicate to someone else where that element is located in the html structure</p>
+
+
+			<p class="fragment"><b>Q: do we need javascript to build interactive quizzes like on buzzfeed?</b></p>
+            <p class="fragment pad-left-lg">A: Yes...Interactive being the key word here.</p>
+
+            <p class="fragment"><b>Q: What is the difference between grouping and nesting elements?</b></p>
+                <p class="fragment pad-left-lg">A: <b>Grouping</b> CSS elements is meant to apply the same CSS to all those elements at once while <b>Nesting</b> is meant to create a very specific path to an element as to distinguish it from other elements of the same name.</p>
+          </div>
+
+				</section>
+<section data-background="#FFF" class="text-left">
+					<div class="heading" id="feedback">Comments/Feedback...</div>
+
+            <div class="text-smallest">
+            	   <p class="fragment pad-left-lg">&#149; I wish we did more labs! They're super helpful and I have a lot of fun problem solving through them. I feel like we spend a lot of time on one when we can have multiple/more diverse sets for more practice during the class.</p>
+     <p class="fragment pad-left-lg">&#149; I kinda got lost today</p>
+       <p class="fragment pad-left-lg">&#149; The three GA Press Releases were really helpful in just exposing me to all the CSS elements we discussed in detail today.</p>
+     <p class="fragment pad-left-lg">&#149;  Another good class where I'm feeling overall comfortable with the material</p>
+
+            </div>
+
 				</section>
 
-<!-- 				<section class="title">
-					<h1>Questions</h1>
-				</section>
 
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Questions</div>
-
-					<p class="text-smaller"><b>Q: When breaking up large groups of text, is it better to use the <code class="code">&lt;br&gt;</code> tag, or different <code class="code">&lt;p&gt;</code>'s?</b></p>
-					<p class="fragment text-smallest">A: <code class="code">&lt;p&gt;</code>'s are <a href="http://codepen.io/cheshireoctopus/pen/qrXypa?editors=1100#0" target="_blank">recommended</a>; leverage CSS for spacing</p>
-					<p class="fragment text-smaller"><b>Q: So I uploaded to Github now what? What do I do with the files after they are on GitHub? How do I put this stuff on a server?</b></p>
-					<p class="fragment text-smallest">A: Technically, it's already on GitHub's server :) - if you don't want to rely on GitHub, or you already have your own server, check out <a href="http://www.webopedia.com/TERM/F/ftp.html" target="_blank">FTP</a></p>
+	<!-- 		<section class="title" id="homework">
+					<h1>Homework Review</h1>
 				</section> -->
 
-				<!-- CLASSES AND ID'S -->
-				<section class="center">
-					<p>I have multiple <code class="code">&lt;p&gt;</code> tags.</p>
-					<p>How do I style each differently?</p>
-				</section>
+<!-- 			<section data-background="#FFF" class="text-left">
+					<div class="heading">Activity: Talk and Turn - 5min</div>
+					<div class="text-smaller">
+						<p class="fragment">&#149; Choose a neighbor to be your partner. Perhaps someone who you haven't yet spoken to.</p>
+						<p class="fragment"> &#149; Open one of the GA Press Releases that both you and your partner completed.</p>
+						<p class="fragment"> &#149; Do the following:</p>
+						<ul class="pad-left-lg">
+							<li class="fragment "> Review one question that you noted in the design/implementation.</li>
+							<li class="fragment"> Determine if your partner can shed any insight or has the same question.</li>
+						</ul>
+						<p class="fragment"> &#149;Each group will present at least one question.</p>
+					</div>
+				</section> -->
 
-				<section class="title" id="classes-ids">
-					<h1>Classes and ID's</h1>
+
+
+		<!-- CSS COLOR PROPERTY -->
+				<section class="title" id="color-property">
+					<h1>CSS Color Property</h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Applying Element ID's</div>
-
-					<div class="text-smallest">
-						<p class="fragment">&#149; ID's are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">attributes</a> (additional data that specify element behavior)</p>
-						<p class="fragment">&#149; Assigned to only <u>one</u> HTML element per page (app)</p>
-						<p class="fragment">&#149; Identify the element for styling/scripting</p>
-						<div class="fragment">
-							<p>&#149; Cannot contain spaces</p>
-<pre><code>
-	// DO NOT DO THIS
-	&lt;p id="important title">Hello, World!&lt;/p>
-
-	// DO THIS
-	&lt;p id="important-title">Hello, World!&lt;/p>
-
-</code></pre>
-						</div>
-						<p class="fragment">&#149; Convention is to use the dash (<code class="code">-</code>) as the delimiter</p>
+					<div class="heading">Previous Student Projects</div>
+					 <p class="fragment"><b>Let's take a quick look at previous student projects that focused on color.</b></p>
+					<div class="text-smaller">
+						<p class="fragment"><a href="https://codepen.io/jkeohan/full/JLmoJr/">Two Hue</a></p>
+						<p class="fragment"><a href="https://codepen.io/jkeohan/full/XExjQa/">Hue Clone</a></p>
+						<p class="fragment"><a href="http://allusiveear.com/colorWheel/colorWheel.html">Color Wheel</a></p>
+						<p class="fragment"><a href="https://color-picker-ctmassiffc.now.sh/">Color Picker</a></p>
+						
 					</div>
 				</section>
 
+
+			<section data-background="#FFF" class="text-left">
+					<div class="heading">Chrome Extensions for Colors</div>
+					<p class="fragment">&#149; Let's take a moment and install one or both of the following Chrome Extensions for pulling a specific color from a site.</p>
+					<div class="text-smaller">
+						<p class="fragment"><a href="https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en">Eye Dropper</a></p>
+						<p class="fragment"><a href="https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg?hl=en">Colorpick Eyedropper</a></p>
+					</div>
+				</section>
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Targeting Element ID's</div>
-
+					<div class="heading">CSS Color Property</div>
 					<div class="text-smallest">
-					<p>&#149; To style the following ID:</p>
+						<p>&#149; Text color can be set with <code class="code">color</code>:</p>
 <pre><code>
-	&lt;p id="important-title">Hello, World!&lt;/p>
-
-</code></pre>
-					<div class="fragment">
-						<p>&#149; Use <code class="code">#</code> + the ID's name:</p>
-<pre><code>
-	#important-title {
+	h1 {
 	  color: red;
 	}
 
 </code></pre>
-					<p>
-						&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VvBZQB?editors=110">CodePen Exercise</a>
-					</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Applying Element Classes</div>
-
-					<div class="text-smaller">
-						<p>&#149; Classes are also attributes</p>
-						<p class="fragment">&#149; Assigned to <u>multiple</u> HTML elements per page</p>
-						<p class="fragment">&#149; Identifies the elements for styling/scripting</p>
 						<div class="fragment">
-							<p>&#149; Like the <code class="code">id</code> attribute, <code class="code">class</code> cannot contain spaces</p>
-<pre><code>
-	&lt;p class="hello">Hello, World!&lt;/p&gt;
-
-	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
-
-	&lt;p class="hello">Hello, Jupiter!&lt;/p&gt;
-
-</code></pre>
-						</div>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Targeting Element Classes</div>
-
-					<div class="text-smallest">
-						<p>&#149; To style the following classes:</p>
-<pre><code>
-	&lt;p class="hello">Hello, World!&lt;/p&gt;
-	&lt;p class="hello">Hello, Mars!&lt;/p&gt;
-
-</code></pre>
-						<div class="fragment">
-							<p>&#149; Use <code class="code">.</code> + the class's name:</p>
-<pre><code>
-	.hello {
-	  color: pink;
-	}
-
-</code></pre>
-						</div>
-						<div class="fragment">
-							<p>&#149; Elements can have more than one class:</p>
-<pre><code>
-	&lt;p class="push-left text-smaller">Hello, World!&lt;/p&gt;
-
-</code></pre>
-						</div>
-						<p class="fragment">&#149; Add HTML classes to the previous <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VvBZQB?editors=110">CodePen</a></p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">ID's vs. Classes</div>
-
-					<div class="text-smaller">
-						<p>&#149; General rule:</p>
-						<div class="pad-left-lg">
-							<p>&rArr; Use <code class="code">id</code> when you are styling <u>ONE</u> specific element</p>
-							<p>&rArr; Use a <code class="code">class</code> when you are styling a <u>GROUP</u> of elements</p>
-						</div>
-						<div class="fragment">
-							<p>&#149; Note:</p>
+							<p>&#149; Color values can be specified using:</p>
 							<div class="pad-left-lg">
-								<p>&rArr; Elements cannot have more than one ID</p>
-								<p>&rArr; Elements can have multiple classes</p>
+								<p>&rArr; color keyword: <code class="code">red</code></p>
+								<p class="fragment">&rArr; rgb: <code class="code">rgb(255, 0, 0)</code></p>
+								<p class="fragment">&rArr; hex code: <code class="code">#FF0000</code></p>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<!-- GROUPING SELECTORS -->
-				<section class="title" id="grouping-selectors">
-					<h1>Grouping Selectors</h1>
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Color: Keyword Value</div>
+					<div class="text-smallest">
+<pre><code>
+	span {
+	  color: red;
+	}
+
+</code></pre>
+
+						<p>&#149; Simplest; least-descriptive</p>
+						<div class="fragment">
+							<p>&#149; red, green, blue, etc.</p>
+							<p class="pad-left-lg">&rArr; <span style="color: deeppink">deeppink</span></p>
+							<p class="pad-left-lg">&rArr; <span style="color: chartreuse">chartreuse</span></p>
+						</div>
+						<p class="fragment">&#149; <a href="http://www.crockford.com/wrrrld/color.html">More colors...</a></p>
+					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Grouping Selectors</div>
+					<div class="heading">CSS Color: RGB Value</div>
+
+<pre><code>
+	span {
+	  color: rgb(255, 0, 0);
+	}
+
+</code></pre>
+					<div class="text-smaller">
+						<p>&#149; Bit more complicated; bit more powerful</p>
+						<p class="fragment">&#149; First value is red; second is green; third is blue</p>
+						<p class="fragment">&#149; Each value in a range 0 - 255</p>
+<p class="fragment">&#149; There are <span class='code'>16,777,216 </span>possible choices.</p>
+						
+						<p class="fragment">&#149; Values closer together are gray or muted:</p>
+						<p class="pad-left-lg fragment">
+							<span style="color: rgb(200,200,200)">rgb(200,200,200)</span> /
+							<span style="color: rgb(155,155,155)">rgb(155,155,155)</span> /
+							<span style="color: rgb(075,075,075)">rgb(075,075,075)</span>
+						</p>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Color: Hexadecimal Value</div>
+
+<pre><code>
+	p {
+	  color: #463DB3;
+	}
+
+</code></pre>
+					<p class="fragment">&#149; Very robust...but there's some math happening</p>
+					<p class="fragment">&#149; Again there are <span class='code'>16,777,216 </span>possible choices.</p>
+					<p class="fragment">&#149; How it works: <a target="_blank" href="http://www.smashingmagazine.com/2012/10/the-code-side-of-color/">"The Code Side of Color"</a></p>
+					<p class="fragment">&#149; Adobe Color: <a target="_blank" href="https://color.adobe.com">https://color.adobe.com</a></p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Applying Color: Text vs. Background</div>
 
 					<div class="text-smaller">
-						<p>Is there anything wrong with this CSS:</p>
+						<p>&#149; <code class="code">color</code> &rArr; Used to apply color to text</p>
+						<div class="pad-left-lg ">
 <pre><code>
-	h2 {
-	  color: red;
-	}
-
-	.some-class {
-	  color: red;
-	}
-
-	#some-title {
-	  color: red;
+	p {
+	  color: rgb(255, 0, 0);
 	}
 
 </code></pre>
-						<p class="fragment">No - nothing is wrong! However, is anything being repeated?</p>
-					</div>
-				</section>
-
-				<section data-background="#FFF" class="text-left">
-					<div class="heading">Grouping Selectors</div>
-
-					<p>&#149; Give the same properties to a series of selectors without repeating CSS rules</p>
-					<div class="fragment">
-						<p>&#149; Group selectors using a comma separator:</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; <code class="code">background</code> &rArr; Used to apply a background color (or image) to elements:</p>
+							<div class="pad-left-lg">
 <pre><code>
-	h2, .some-class, #some-id {
-	    color: red;
+	p {
+	  background: rgb(0, 255, 0);
 	}
 
 </code></pre>
+							</div>
+						</div>
 					</div>
-					<p class="fragment">&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoPZYz?editors=110">CodePen Exercise</a></p>
 				</section>
 
-				<!-- NESTING SELECTORS -->
-				<section class="title" id="nested-selectors">
-					<h1>Nested Selectors</h1>
+
+	<!-- 						 <section data-background="#FFF" class="text-left">
+					<div class="heading">Lab</div>
+					<div class="text-smallest">
+						<p>&#149; Open the following <a href="https://codepen.io/jkeohan/pen/625f39cb59e47713f1bf362347a4e13d/">CodePen</a></p>
+						<div class="pad-left-lg">
+							<p>&rArr; <code class="code">index.html</code> and <code class="code">resume.html</code></p>
+						</div>
+						<p>&#149; Add a <code class="code">styles.css</code> file to the same directory</p>
+						<p>&#149; The <code class="code">index.html</code> will be the landing page for your course portfolio</p>
+						<div class="pad-left-lg text-smaller">
+							<p>1) Add new HTML (perhaps a paragraph on why you are taking FEWD)</p>
+							<p>2) Make a list of links to your homework and class work</p>
+							<p>3) Style the HTML with CSS</p>
+							<p>4) Commit and push your changes</p>
+						</div>
+					</div>
+				</section> -->
+
+	
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Color Lab - 15min</div>
+					<div class="text-smallest">
+
+						<p class='fragment'>We've been tasked with choosing a style guide for our company web site. <a href="http://foodsense.is/">Food Sense</a></p>
+						<p class='fragment'>Our goal is to search CodePen to find an apppropriate premade template that we can call our own...no this is not cheating...</p>
+					 <p class='fragment'>Lucky for you I already found a few that we can choose from:</p>
+					 <p class="pad-left-lg fragment">&rArr; <a target="_" href="https://codepen.io/jkeohan/pen/vbKmJv?editors=1100">Joe's Basic Starter Style Guide</a></p>
+					 
+						
+						<p class="pad-left-lg fragment">&rArr; <a target="_" href="https://codepen.io/jkeohan/pen/qgNyav">Style Guide Template Example 1</a></p>
+						<p class="pad-left-lg fragment">&rArr; <a target="_" href="https://codepen.io/icebob/pen/GJqxNN?editors=0100">Style Guide Template Example 2</a></p>
+					
+					
+					</div>
+				</section>
+
+				<!-- FONTS -->
+				<section class="hero" id="fonts">
+					<h1><span style="font-family: 'Comic Sans MS'">Fonts and Text</span></h1>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Nested Selectors</div>
+					<div class="heading">CSS Font: Various Properties</div>
 
 					<div class="text-smallest">
-						<p>&#149; CSS selectors can contain more than one selector</p>
-						<p>&#149; More complicated selectors => targeted styles</p>
 						<div class="fragment">
-							<p>&#149; Child selector:</p>
-<pre><code>
-	#some-id p {
-	  color: red;
-	}
-
-</code></pre>
+							<p>&#149; <code class="code">font-weight</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Sets the "thickness" of the font</p>
+							<p class="pad-left-lg text-smaller">
+								&rArr; normal and <span style="font-weight: bold">bold</span>; values 100 - 900
+							</p>
 						</div>
-						<p class="fragment">&#149; This will target <code class="code">&lt;p&gt;</code> tags inside of the element with <code class="code">id="some-id"</code></p>
-						<p class="fragment">&#149; <code class="code">&lt;p&gt;</code> tags outside of <code class="code">some-id</code> will <u>not</u> share this style</p>
-						<p class="fragment">&#149; <a href="http://codepen.io/cheshireoctopus/pen/ZpXrqW?editors=1100#0" target="_blank">Example</a></p>
+						<div class="fragment">
+							<p>&#149; <code class="code">font-style</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Sets a "slant" to the font</p>
+							<p class="pad-left-lg text-smaller">
+								&rArr; <span style="font-style: normal">normal</span> and <span style="font-style: italic">italic</span>
+							</p>
+						</div>
+						<div class="fragment">
+							<p>&#149; <code class="code">font-size</code></p>
+							<p class="pad-left-lg text-smaller">&rArr; Sets the size of the font</p>
+							<p class="pad-left-lg text-smaller">&rArr; Pixel values (12px); percentage (75%); em's (1em)</p>
+						</div>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Nested Selectors: Examples</div>
+					<div class="heading">CSS Font: Font-Family Property</div>
+
+					<div class="text-smaller">
+						<p>&#149; <code class="code">font-family</code></p>
+						<div class="pad-left-lg">
+							<p>&rArr; Applies a particular font to the element</p>
+							<p>&rArr; Accepts multiple values</p>
+							<p>&rArr; Should always end with: <code class="code">serif</code>, <code class="code">sans-serif</code>, or <code class="code">monospace</code></p>
+						</div>
+<pre><code>
+	p {
+	  font-family: 'Comic Sans MS', helvetica, serif, sans-serif;
+	}
+
+</code></pre>
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">CSS Font: Text Property</div>
 
 					<div class="text-smallest">
-						<div class="fragment">
+						<p>&#149; <code class="code">text-align</code></p>
+						<p class="pad-left-lg">&rArr; how text is oriented within the containing block</p>
 <pre><code>
-	p a {
-	  color: black;
+	p {
+		text-align: left; (or "right" or "center")
+	}
+
+</code></pre>
+						<div class="fragment">
+							<p>&#149; <code class="code">text-decoration</code></p>
+							<p class="pad-left-lg">&rArr; controls extra-textual visual emphasis (<u>underline</u>)</p>
+<pre><code>
+	p {
+	  text-decoration: underline;
 	}
 
 </code></pre>
 						</div>
-						<div class="fragment">
-<pre><code>
-	#some-id p a {
-	  color: red;
-	}
+					</div>
+				</section>
 
-</code></pre>
-						</div>
-						<div class="fragment">
-<pre><code>
-	p .some-class, p #some-id {
-	  color: blue;
-	}
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Import Fonts - 10min</div>
+					<div class="text-smallest">
 
-</code></pre>
-						</div>
-						<p class="fragment">&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKxemz?editors=110">CodePen Exercise</a></p>
+						<p class='fragment'>&#149; Anyone remember <a target="_"  href="https://codepen.io/jkeohan/pen/JBpBbw?editors=1100">Esha's Restaurant</a></p>
+						<p class='fragment'>&#149; Guessing you do as it was the last Dash project you completed.</p>
+					  <p class='fragment'>&#149; Anyway we need to fix a few of the fonts as they have been removed.</p>
+						<p class=" fragment">&#149; Let's take a look at the css and see what we need to do.</p>
 					</div>
 				</section>
 
@@ -311,6 +377,8 @@
 							</div>
 						</div>
 						<p class="fragment">&#149; Awesome box model <a href="http://guyroutledge.github.io/box-model/" target="_blank">demo</a></p>
+
+					
 					</div>
 				</section>
 
@@ -361,7 +429,7 @@
 						<img src="img/class04/box-model-margin.png">
 					</div>
 				</section>
-
+<!-- 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Box Model Codealong</div>
 
@@ -369,7 +437,7 @@
 					<p>2. Create a <code class="code">&lt;div&gt;</code></p>
 					<p>3. Fill it with some content (hint: type "lorem" and hit <code class="code">tab</code>)</p>
 					<p>4. Apply a <code class="code">background</code> color to it</p>
-				</section>
+				</section> -->
 
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">The Box Model: Borders</div>
@@ -462,16 +530,25 @@
 					</div>
 				</section>
 
-				<section class="center">
-					<h1>Box Model Exercise</h1>
-					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKxeZd?editors=110">CodePen</a></p>
+<!-- 				<section class="center">
+					<h1>Box Model Exercise - 15min</h1>
+					<p><a target="_blank" href="https://codepen.io/jkeohan/pen/rrpgXd">CodePen</a></p>
+				</section> -->
+
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Box Model Exercise - 15min</div>
+					<div class="text-smallest">
+							<p class="fragment">&rArr; Open the following <a target="_blank" href="https://codepen.io/jkeohan/pen/rrpgXd">FEWD - The Box Model Exercise - Starter</a> CodePen</p>
+							<p class="fragment">&rArr; Perform the steps in the CSS section</p>
+					</div>
 				</section>
 
 				<!-- BREAK (5-7 mins) -->
-				<section class="center">
+<!-- 				<section class="center">
 					<h1>5 minute break</h1>
 					<img src="img/main/break-time-bear.jpg">
-				</section>
+				</section> -->
 
 				<section class="title" id="the-display-property">
 					<h1>The Display Property</h1>
@@ -547,14 +624,14 @@
 					<p class="pad-left-lg">&rArr; <code class="code">&lt;em&gt;</code></p>
 				</section>
 
-				<section class="center">
+<!-- 				<section class="center">
 					<h1>The Display Property</h1>
 					<div class="text-left">
 						<p>Easiest way to explore the <code class="code">display</code> property is to tinker with the background color of various elements:</p>
 						<p class="text-center"><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/NGBvGw?editors=110">Code Pen Exercise</a></p>
 					</div>
 				</section>
-
+ -->
 				<section class="title" id="span-div">
 					<h1><span class="lower">&lt;span&gt;</span> & <span class="lower">&lt;div&gt;</span></h1>
 				</section>
@@ -573,7 +650,7 @@
 
 					<p>&#149; The generic inline element</p>
 					<p>&#149; <code class="code">&lt;span&gt;</code> is used to add hooks onto specific <u>inline</u> words or phases within flowing content</p>
-					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/epjEJb?editors=110">CodePen Exercise</a></p>
+<!-- 					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/epjEJb?editors=110">CodePen Exercise</a></p> -->
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -582,7 +659,7 @@
 					<p>&#149; The generic block element</p>
 					<p>&#149; <code class="code">&lt;div&gt;</code> is used to organize other tags into blocks of content</p>
 					<p>&#149; We use it for layout EVERYWHERE</p>
-					<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/JYBybj?editors=110">CodePen Exercise</a></p>
+		<!-- 			<p>&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/JYBybj?editors=110">CodePen Exercise</a></p> -->
 				</section>
 
 				<section class="center">
@@ -600,24 +677,25 @@
 							<p class="pad-left-lg">1) a width on the element (otherwise it will remain at 100% of its parent's width)</p>
 							<p class="pad-left-lg">2) <code class="code">margin: 0 auto;</code></p>
 						</div>
-						<p class="fragment">
-							&#149; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/epjEgX?editors=110">CodePen Exercise</a>
+
 						</p>
 					</div>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Lab/HW</div>
+					<div class="heading">Relaxr Lab - 30min</div>
 					<div class="text-smallest">
-						<p>1. Open the <code class="code">travel-bucket-list</code> directory</p>
-						<p>2. Build <code class="code">spec.png</code> in <code class="code">index.html</code></p>
-						<p>3. Make sure <code class="code">index.html</code> and <code class="code">styles.css</code> are linked!</p>
-						<p>4. You will need to use:</p>
-						<p class="pad-left-lg">&rArr; Relative links for the images</p>
-						<p class="pad-left-lg">&rArr; <code class="code">padding</code></p>
-						<p class="pad-left-lg">&rArr; <code class="code">margin</code></p>
-						<p class="pad-left-lg">&rArr; <code class="code">text-align</code></p>
-						<p class="pad-left-lg">&rArr; Classes, ID's, nested selectors</p>
+
+						<p class='fragment'>1. Open this <a target="_blank" href="https://codepen.io/jkeohan/pen/gXYmrM?editors=0100">FEWD - Relaxr - Starter</a> codepen.</p>
+						<p class='fragment'>2. Review the <a href="http://res.cloudinary.com/jkeohan/image/upload/v1533062354/relaxr_landing_page_mockup.jpg">design image</a> and try to determine the structure for just the <b>first section</b>. </code></p>
+						<p class='fragment'>3. The HTML and CSS section contains some basic starter code for the site but require that you add the needed elements/css to match the design image. </code></p>
+						<p class='fragment'>4. The JS section contains the design file specs</code></p>
+						<p class='fragment'>5. You will need to consider the following:</p>
+						<p class="pad-left-lg fragment">&rArr; Absolute links for the images</p>
+						<p class="pad-left-lg fragment">&rArr; <code class="code">padding</code></p>
+						<p class="pad-left-lg fragment">&rArr; <code class="code">margin</code></p>
+						<p class="pad-left-lg fragment">&rArr; <code class="code">text-align</code></p>
+						<p class="pad-left-lg fragment">&rArr; Classes, ID's, nested selectors</p>
 					</div>
 				</section>
 
@@ -626,7 +704,7 @@
 				</section>
 
 				<!-- ON DECK -->
-				<section data-background="#FFF" class="text-left">
+<!-- 				<section data-background="#FFF" class="text-left">
 					<div class="heading">What's On Deck</div>
 
 					<h4>Class #5 (of 20) - Introduction to Page Layout</h4>
@@ -639,7 +717,7 @@
 
 				<section class="center">
 					<h1>Exit Tickets!</h1>
-				</section>
+				</section> -->
 			</div>
 		</div>
 

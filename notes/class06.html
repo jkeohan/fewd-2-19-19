@@ -18,38 +18,25 @@
 
 					<div class="opening-instructions">
 						<div class="text-smaller">
-							<p>1) Please download <a href="../materials/class06.zip">Class 06 Starter Code</a></p>
-							<p>2) Move the following into your <code class="code">class-work</code> directory:</p>
-							<div class="pad-left-lg">
-								<p>&rArr; <code class="code">horizontal-nav</code>
-								<p>&rArr; <code class="code">floating-sections</code>
-								<p>&rArr; <code class="code">relative-path-practice</code>
-								<p>&rArr; <code class="code">layout-challenge</code></p>
-							</div>
-							<p>3) <code class="code">fashion-blog-solution</code> is included</p>
-							<p>4) Move the following into your <code class="code">homework</code> directory:</p>
-							<p class="pad-left-lg"> &rArr; <code class="code">fashion-blog-part2</code>
+							<p>1) Please download <a href="../materials/fashion-blog.zip">Class 06 Homework</a></p>
+							<p>2) Move the following into your <code class="code">homework</code> directory:</p>
+							<p class="pad-left-lg"> &rArr; <code class="code">fashion-blog</code>
 						</div>
 					</div>
 				</section>
 
 				<section class="hero condensed">
 					<h1>Class <span class="red">#06</span></h1>
-					<h1>3/22/2017</h1>
+					<h1>11/2/2017</h1>
 					<h1 class="lesson-title">Page Layout: Floats and Clears</h1>
 				</section>
 
 				<!-- ANNOUNCEMENTS -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Annoucements</div>
-					<p>&#149; GA Happy Hour</p>
-					<div class="pad-left-lg">
-						<p>&rArr; Monday, 3/27</p>
-						<p>&rArr; Old Town Bar (18th, between Broadway and Park)</p>
-					</div>
 					<p>&#149; Final Projects:</p>
 					<div class="pad-left-lg">
-						<p>&rArr; First deliverable due Monday, April 3rd</p>
+						<p>&rArr; First deliverable due Tuesday, Nov 7th</p>
 						<p>&rArr; Project proposal/ideas</p>
 					</div>
 				</section>
@@ -62,35 +49,21 @@
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Questions</div>
 
-					<div class="text-smaller">
-						<p class="text-smaller"><b>Q: If you link multiple CSS files to your HTML doc, which one takes precedence if there are conflicts? </b></p>
-						<div class="fragment">
-							<p class="text-smallest">A: The last style sheet loaded will take precedence.</p>
-<pre><code>
-	&lt;link rel="stylesheet" href="css/boostrap.css"&gt;
-	&lt;link rel="stylesheet" href="css/style.css"&gt;
-
-</code></pre>
-						</div>
-						<p class="fragment text-smaller"><b>Q: Is semantic HTML a best practice? Or, is it only used for data-tracking?</b></p>
-						<div class="fragment text-smallest">
-				 			<p>A: Beyond SEO, semantic HTML is also used for:</p>
-				 			<div class="pad-left-lg">
-				 				<p>&#149; Accessibility (screen readers)</p>
-				 				<p>&#149; Internationalization</p>
-				 				<p>&#149; Interoperability (help other programmers understand the code)</p>
-				 			</div>
-				 		</div>
-				 	</div>
+						<p class="text-smaller"><b>Q: Is there a way to see rendered pages (e.g. index.html) from within the GitHub UI?</b></p>
+					<p class="fragment text-smallest">A: Yes and we will get to it first thing Tuesday...or mabye even sooner.</p>
+					<p class="text-smaller fragment"><b>Q: Do semantic html elements all have the same browser defaults as divs?</b></p>
+					<p class="text-smallest fragment">A: Yes. They are used to represent content type not add css.</p>
+					<p class="text-smaller fragment"><b>Q: If possible, can we take just a couple minutes to discuss the browser variances?</b></p>
+					<p class="text-smallest fragment">A: Browsers can very unique ways...It's best to leave it up to tools like <a href="https://autoprefixer.github.io/">Autoprefixer</a> to take care of those things for you. </p>
+		
 				</section>
+
 
 				<!-- AGENDA -->
 				<section data-background="#FFF" class="text-left">
 					<div class="heading">Agenda</div>
 
 					<p>&#149; <a href="#/pseudo-classes">Pseudo Class Selectors</a></p>
-					<p>&#149; <a href="#/horizontal-nav">Horizontal navigation</a></p>
-					<p>&#149; <a href="#/display-inline-block"><code class="code">display: inline-block</code></a></p>
 					<p>&#149; <a href="#/float">CSS <code class="code">float</code> property</a></p>
 					<p>&#149; <a href="#/clear">CSS <code class="code">clear</code> property</a></p>
 				</section>
@@ -117,7 +90,7 @@
 					<div class="text-smaller">
 						<p>&#149; Pseudo class selectors allow styling given an element's state</p>
 						<div class="fragment">
-							<p>&#149; Consider an <code class="code">&lt;a&gt;</code> tag; it can be:</p>
+							<p>&#149; An <code class="code">&lt;a&gt;</code> tag has the following available pseudo classes:</p>
 							<div class="pad-left-lg">
 								<p>&rArr; Unvisited (normal)</p>
 								<p>&rArr; Visited</p>
@@ -125,7 +98,7 @@
 								<p>&rArr; Active</p>
 							</div>
 						</div>
-						<p class="fragment">&#149; With pseudo classes, we can apply CSS rules to each of the above states</p>
+						<p class="fragment">&#149; The <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">order</a> in which they are referenced in CSS is also muy importante</p>
 					</div>
 				</section>
 
@@ -160,7 +133,7 @@
 				</section>
 
 				<!-- HORIZONTAL NAVIGATION -->
-				<section class="title" id="horizontal-nav">
+<!-- 				<section class="title" id="horizontal-nav">
 					<h1>Horizontal Navigation</h1>
 					<p class="text-smallest">Q: How'd you build Fashion Blog's nav?</p>
 				</section>
@@ -196,10 +169,10 @@
 					</div>
 					<p class="fragment">&#149; We can change <code class="code">display: block</code>...</p>
 					<p class="fragment">&#149; ...but would have to implement floats :(</p>
-				</section>
+				</section> -->
 
 				<!-- DISPLAY: INLINE-BLOCK -->
-				<section class="title" id="display-inline-block">
+<!-- 				<section class="title" id="display-inline-block">
 					<h2>display: inline-block</h2>
 				</section>
 
@@ -224,7 +197,7 @@
 					<p>1) Open <code class="code">horizontal-nav</code> in SublimeText</p>
 					<p>2) Build what you see in the <code class="code">.png</code> files</p>
 					<p>3) Note the <code class="code">navigation-selected.png</code></p>
-				</section>
+				</section> -->
 
 				<!-- FLOATS -->
 				<section class="title" id="float">
@@ -261,7 +234,7 @@
 				<section class="center">
 					<h2>Floats + Layout</h2>
 					<img src="img/class06/float-layout.jpg" alt="">
-					<p><a target="_blank" href="http://codepen.io/cheshireoctopus/pen/VamNPP?editors=1100">CodePen Example</a></p>
+					<p><a target="_blank" href="https://codepen.io/jkeohan/pen/QOydQV?editors=1100">CodePen Example</a></p>
 				</section>
 
 				<section data-background="#FFF" class="text-left">
@@ -269,16 +242,25 @@
 
 					<div class="text-left text-smaller">
 						<p>1) A floated element should always have a <code class="code">width</code>; otherwise it will collapse to the width of its content:</p>
-						<p class="pad-left-lg"> &rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQajX?editors=110">Example</a></p>
+				<!-- 		<p class="pad-left-lg"> &rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQajX?editors=110">Example</a></p> -->
 						<div class="fragment">
 							<p>2) A floated box will shift until it touches either the edge of its parent, or the edge of another floated box</p>
-							<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/gaQpXX?editors=110">Example</a></p>
+						<!-- 	<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/gaQpXX?editors=110">Example</a></p> -->
 						</div>
 						<div class="fragment">
 							<p>3) Elements below a floated element will slide up "behind" it; to fix this, we need to <code class="code">clear</code> the float</p>
-							<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoGNdY?editors=110">Example</a></p>
+					<!-- 		<p class="pad-left-lg">&rArr; <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/BoGNdY?editors=110">Example</a></p> -->
 						</div>
+
+						<p class="fragment"><a href="https://codepen.io/jkeohan/pen/422788fb0859818152accc10f0714b2c?editors=1100">Print Media Demo</a></p>
 					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">LAB: Working With FLoats: 30min</div>					
+					<p>Work on the following Exercises</p>
+					<p>1) <a href="https://codepen.io/jkeohan/pen/bYEejK">Print Media</a></p>
+					<p>2) <a href="https://codepen.io/jkeohan/pen/ZaQpde?editors=1100">Custom List</a></p>
 				</section>
 
 				<section class="title" id="clear">
@@ -292,7 +274,9 @@
 						<p>&#149; Floated objects do not add height to their containing objects; this creates two problems:</p>
 						<div class="pad-left-lg">
 							<p>1) Objects further down the page will render incorrectly</p>
-							<p>2) If there are only floated objects within an object, it will <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQaEx?editors=110">collapse</a></p>
+							<p>2) If there are only floated objects within an object, it will collapse
+							<!--  <a target="_blank" href="http://codepen.io/cheshireoctopus/pen/wKQaEx?editors=110">collapse</a> -->
+							</p>
 						</div>
 						<p class="fragment">&#149; To solve these issues, we must handle or <u>clear</u> floated elements</p>
 						<div class="fragment">
@@ -363,12 +347,12 @@
 				</section>
 
 				<section data-background="#FFF" class="text-left">
-					<div class="heading">Lab/HW: Fashion Blog (pt. 2)</div>
-
-					<p>1) Open <code class="code">fashion-blog-part2</code> in SublimeText</p>
+					<div class="heading">Lab/HW: Fashion Blog</div>					
+					<p>1) Open <code class="code">fashion-blog</code> in SublimeText</p>
 					<p>2) Build what you see in <code class="code">design.png</code></p>
-					<p>3) Copy found in <code class="code">copy.txt</code></p>
-					<p>4) Will have to look up <code class="code">:first-letter</code></p>
+					<p>3) Copy found in <code class="code">copy.txt</code></p></p>
+
+					<p>Use the following <a href="https://codepen.io/jkeohan/pen/ZaQKya">fashion-blog</a> codepen as your starting point and when complete copy all content sublime text, commit your changes and push to your repo.</p>
 				</section>
 
 				<!-- THE END -->

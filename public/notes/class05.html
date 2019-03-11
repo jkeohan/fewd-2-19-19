@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>FEWD: Class 05</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<!-- 				<section class="hero condensed">
+					<h1>HELLO</h1>
+					<div class="opening-instructions">
+						<p>1) Please download <a href="../materials/relaxr-cont.zip">relaxr-cont starter code</a></p>
+						<p>2) Unzip the folder</p>
+						<p>3) Move the <code class="code">relaxr-starter</code> folder following into your <code class="code">classwork</code> directory</p>
+					</div>
+				</section> -->
+
+				<section class="hero condensed">
+					<h1>Class <span class="red">#05</span></h1>
+					<h1 class="lesson-title">Introduction to Page Layout</h1>
+				</section>
+
+				<!-- ANNOUNCEMENTS -->
+<!-- 				<section data-background="#FFF" class="text-left">
+					<div class="heading">Annoucements</div>
+					<p>&#149; GA Happy Hour</p>
+					<div class="pad-left-lg">
+						<p>&rArr; Monday, 3/27</p>
+						<p>&rArr; Old Town Bar (18th, between Broadway and Park)</p>
+					</div>
+					<p>&#149; Final Projects:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; First deliverable due Monday, April 3rd</p>
+						<p>&rArr; Project proposal/ideas</p>
+					</div>
+				</section> -->
+
+				<!-- QUESTIONS -->
+				<section class="title">
+					<h1>Questions</h1>
+				</section>
+
+<section data-background="#FFF" class="text-left">
+					<div class="heading" id="feedback">Feedback & Questions</div>
+  <p class="fragment"><b>Questions...</b></p>
+			      <div class="text-smallest pad-left-lg">
+            <p class="fragment"><b>Q: Could we still go over a little bit of display?  </b></p>
+            <p class="fragment pad-left-lg">A: Sure thing.  That specific CSS property will come up again and again.</p>
+            
+            <p class="fragment"><b>Q: When do you use ID and when do you use Class? I know ID is more specific but Class seems pretty specific too...</b></p>
+            <p class="fragment pad-left-lg">A: <b>Classes</b> are meant to target multiple elements and therefore be used more than once. <b>ID's</b> are meant to target one element only and not to be reused.</p>
+<p class="fragment"><b>Q: We talked about HTML prioritizing styling rules by specificity & proximity -- how does the combination of these 2 impact prioritization? For example an ID that's 'far' (or not the first rule that would be followed by proximity)..</b></p>
+            <p class="fragment pad-left-lg">A: You can download then upload the file to github or someplace else where you can reference the url of the file using <a target="_" href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp"></a>@font-face</p>
+            <p class="fragment"><b>Q: How do I align a button?</b></p>
+            <p class="fragment pad-left-lg">A: Let's figure that out together.</p>
+          </div>
+
+				</section>
+
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+					<p>&#149; <a href="#/relaxr">Relaxr review</a></p>
+					<p>&#149; <a href="#/semantic-html">Semantic HTML</a></p>
+					<p>&#149; <a href="#/relaxrcont">Relaxr cont.</a></p>
+					<p>&#149; <a href="#/horizontal-nav">Horizontal navigation</a></p>
+					<p>&#149; <a href="#/display-inline-block"><code class="code">display: inline-block</code></a></p>
+
+	<!-- 				<p>&#149; <a href="#/css-specificity">CSS Specificity</a></p> -->
+				<!-- 	<p>&#149; <a href="#/dev-tools">Chrome Developer Tools</a></p> -->
+	<!-- 				<p>&#149; <a href="#/browser-variances">Browser Variances</a></p> -->
+				</section>
+
+				<!-- HW REVIEW -->
+				<section class="title" id="relaxr">
+					<h1>Relaxr Review</h1>
+				</section>
+
+		<section data-background="#FFF" class="text-left">
+			<div class="heading">Activity: Talk and Turn - 5min</div>
+					<div class="text-smaller">
+						<p class="fragment">&#149; Choose a neighbor to be your partner. Perhaps someone who you haven't yet spoken to.</p>
+						<p class="fragment"> &#149; Open your copy of the Relaxr project.</p>
+						<p class="fragment"> &#149; Do the following:</p>
+						<ul class="pad-left-lg">
+							<li class="fragment "> Explain to your neighbor one thing about your design choice that you found the most difficult to implement.</li>
+						</ul>
+						<p class="fragment"> &#149;Once completed we will go around the room and discuss.</p>
+					</div>
+	  </section>
+
+
+				<!-- SEMANTIC HTML -->
+				<!-- <section class="title" id="semantic-html">
+					<h1>Semantic HTML</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
+
+					<p><u>Semantic HTML</u>:</p>
+					<p class="pad-left-lg">The use of HTML markup to reinforce the semantics, or <u>meaning</u>, of information in webpages, rather than merely define its presentation or look</p>
+					<div class="fragment">
+						<p>Or...</p>
+						<p class="pad-left-lg">Introduces meaning to the webpage, rather than just the presentation</p>
+					</div>
+				</section>
+
+				<section class="center">
+					<img src="img/class05/unsemantic.png">
+				</section>
+
+				<section class="center">
+					<img src="img/class05/semantic.png">
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
+
+					<p>&#149; The following behave exactly like the <code class="code">&lt;div&gt;</code>:</p>
+					<div class="pad-left-lg text-smaller">
+						<p><code class="code">&lt;header&gt;</code></p>
+						<p><code class="code">&lt;footer&gt;</code></p>
+						<p><code class="code">&lt;nav&gt;</code></p>
+						<p><code class="code">&lt;section&gt;</code></p>
+						<p><code class="code">&lt;aside&gt;</code></p>
+						<p><code class="code">&lt;article&gt;</code></p>
+					</div>
+					<p>&#149; The difference is semantics; each possesses a meaning</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
+
+					<p><code class="code">&lt;header&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines a header for a document</p>
+					<p class="pad-left-lg">&#149; This is <u>different</u> from the <code class="code">&lt;head&gt;</code> element</p>
+					<p><code class="code">&lt;footer&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines a footer for a document</p>
+					<p><code class="code">&lt;nav&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines navigation links</p>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Semantic HTML</div>
+
+					<p><code class="code">&lt;section&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines a section in a document</p>
+					<p><code class="code">&lt;aside&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines content aside from the page content</p>
+					<p><code class="code">&lt;article&gt;</code></p>
+					<p class="pad-left-lg">&#149; Defines an article (as in a blog or news site)</p>
+				</section>
+
+				<section class="center">
+					<h1>Semantic Layout Example:</h1>
+					<img src="img/class05/semantic-layout.png">
+				</section> -->
+
+
+
+				<section class="title" id="relaxrcont">
+					<h1>Relaxr Cont....</h1>
+				</section>
+
+		<section data-background="#FFF" class="text-left">
+			<div class="heading">Continue to work on Relaxr - 60min</div>
+			<p class="fragment"> &#149; Regroup with your partner, but now do the following:</p>
+					<div class="text-smallest">	
+						<ul class="pad-left-lg">
+							<li class="fragment "> Grab a section of whiteboard and draw out what you think would be the layout for the <code class="code">Benefits</code> and <code class="code">Quote</code> sections.</li>
+							<li class="fragment "> Incorporate <code class="code">Semantic</code> elements to complete your design.</li>
+							<li class="fragment "> You will be given <code class="code">15-25min</code> to complete your design after which you will explain your design option to class.</li>
+							<li class="fragment "> Then you will be provided an additional <code class="code">30min</code> to implement your design or that of another group.</li>
+						</ul>
+					</div>
+				</section>
+
+			<!-- HORIZONTAL NAVIGATION -->
+				<section class="title" id="horizontal-nav">
+					<h1>Horizontal Navigation</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;ul&gt;</code></div>
+
+					<p>The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
+					<p class="pad-left-lg">&rArr; <code class="code">&lt;ul&gt;</code></p>
+					<div class="text-center">
+						<img src="img/class06/ul-nav.png">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;a&gt;</code></div>
+					<p>The debate: <code class="code">&lt;ul&gt;</code> vs. <code class="code">&lt;a&gt;</code></p>
+					<p class="pad-left-lg">&rArr; <code class="code">&lt;a&gt;</code></p>
+					<div class="text-center">
+						<img src="img/class06/a-nav.png">
+					</div>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Horizontal Navigation: <code class="code lower">&lt;a&gt;</code></div>
+
+					<p>&#149; Cons of the <code class="code">&lt;a&gt;</code> approach:</p>
+					<div class="pad-left-lg">
+						<p>&rArr; <code class="code">&lt;a&gt;</code> tags are <b>INLINE</b> elements</p>
+						<p>&rArr; Cannot set <code class="code">margin-top</code> or <code class="code">margin-bottom</code></p>
+						<p>&rArr; Cannot set <code class="code">height</code> or <code class="code">width</code></p>
+					</div>
+					<p class="fragment">&#149; We can change <code class="code">display: block</code></p>
+		
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Exercise: Horizontal Nav Using Both Options - 15min</div>
+					<p>1) Open the <a target="_" href="https://codepen.io/jkeohan/pen/aVzvPV">Horizontal Nav CodePen</a></p>
+					<p>2) Fork the pen into your account.</code></p>
+					<p>3) Build what you see in the image.</p>
+				</section>
+
+				<!-- DISPLAY: INLINE-BLOCK -->
+				<section class="title" id="display-inline-block">
+					<h2>display: inline-block</h2>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Display: <code class="code lower">inline-block</code></div>
+
+					<p>&#149; Display block elements...inline</p>
+					<div class="fragment">
+						<p>&#149; Can still set box model properties:</p>
+						<div class="pad-left-lg">
+							<p>&#149; <code class="code">height</code></p>
+							<p>&#149; <code class="code">width</code></p>
+							<p>&#149; <code class="code">margin</code></p>
+							<p>&#149; <code class="code">padding</code></p>
+						</div>
+					</div>
+		<!-- 			<p class="fragment">&#149; <b>Note:</b> IE6 and IE7 do not support <code class="code">display: inline-block</code></p> -->
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Exercise: Horizontal Nav Using nav>ul>li>a - 10min</div>
+					<p>1) Open the <a target="_" href="https://codepen.io/jkeohan/pen/qVEzKX?editors=1010">Horizontal Nav CodePen</a></p>
+					<p>2) Fork the pen into your account.</code></p>
+					<p>3) Build what you see in the image.</p>
+				</section>
+
+
+
+		<section data-background="#FFF" class="text-left">
+			<div class="heading">Continue to work on Relaxr - 40min</div>
+			<p class="fragment"> &#149; Regroup with your partner, but now do the following:</p>
+					<div class="text-smallest">	
+						<ul class="pad-left-lg">
+							<li class="fragment "> Grab a section of whiteboard and draw out what you think would be the layout for the <code class="code">Signup</code> and <code class="code">Footer</code> sections.</li>
+							<li class="fragment "> Incorporate <code class="code">Semantic</code> elements to complete your design.</li>
+							<li class="fragment "> <code class="code">HINT:</code> The footer is using an <code class="code">ul > li > a > img</code> structure for the twitter and facebook images.</li>
+							<li class="fragment "> You will be given <code class="code">15min</code> to complete your design after which you will explain your design option to class.</li>
+							<li class="fragment "> Then you will be provided an additional <code class="code">25min</code> to implement your design or that of another group.</li>
+						</ul>
+					</div>
+				</section>
+
+
+					<section data-background="#FFF" class="text-left">
+					<div class="heading">HW: Relaxr-Cont</div>
+					<div class="text-smallest">
+
+						<p class='fragment'>1. Open this <a target="_blank" href="https://codepen.io/jkeohan/pen/qVdMGL?editors=0010">FEWD - Relaxr-Cont - Starter</a> codepen.</p>
+						<p class='fragment'>2. The HTML and CSS section contains some basic starter code for the site but require that you add the needed elements/css to match the design image. </code></p>
+						<p class='fragment'>3. The JS section contains the design mockups and specs</code></p>
+						<p class='fragment'>4. You will need to use:</p>
+						<p class="pad-left-lg fragment">&rArr; Absolute links for the images</p>
+						<p class="pad-left-lg fragment">&rArr; <code class="code">padding</code></p>
+						<p class="pad-left-lg fragment">&rArr; <code class="code">margin</code></p>
+						<p class="pad-left-lg fragment">&rArr; <code class="code">text-align</code></p>
+						<p class="pad-left-lg fragment">&rArr; Classes, ID's, nested selectors</p>
+					</div>
+				</section>
+				
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+
+				<!-- ON DECK -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">What's On Deck</div>
+
+					<h4>Class #6 (of 20) - Page Layout: Floats + Clears</h4>
+
+			<!-- 		<p>&#149; Horizontal Navigation</p>
+					<p>&#149; <code class="code">display: inline-block;</code></p> -->
+					<p>&#149; CSS Floats/Clear</p>
+					<p>&#149; Float Lab</p>
+				</section>
+
+				<section class="center">
+					<h1>Exit Tickets!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

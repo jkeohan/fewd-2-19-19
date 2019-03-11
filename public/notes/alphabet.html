@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>D3 Basics</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/general-assembly.css" id="theme">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/zenburn.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1 class="red">D3 Basics</h1>
+					<h1></h1>
+				</section>
+
+<!-- 				<section class="hero">
+					<h1>Class <span class="red">#20</span></h1>
+					<h1>01/02/2018</h1>
+					<h1 class="lesson-title">Final Project</h1>
+				</section> -->
+
+				<!-- AGENDA -->
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Agenda</div>
+			<!-- 		<p class="fragment">&#149; <a href="https://generalassemb.ly/education/data-visualization-using-d3/new-york-city/45769">Quick Announcement - D3 Meetup tonight hosted by yours truly</a></p> -->
+					<p class="fragment">&#149; <a href="#/demo">Demo: Alphabet Transitioned</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Basic Building Blocks</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Must Know Methods</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Step 1: Initial Setup</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Step 2: Binding and Rendering data</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">Step 3: Transitioning Data in and Out</a></p>
+					<p class="fragment">&#149; <a href="#/course-recap">References</a></p>
+			<!-- 		<p class="fragment">&#149; <a href="#/certification">React's Strengths</a></p>
+					<p class="fragment">&#149; <a href="#/certification">Leveraging The Two Technologies</a></p> -->
+<!-- 					<p>&#149; <a href="#/you-and-ga">You + GA</a></p>
+					<p>&#149; <a href="#/next-steps">Next Steps</a></p>
+					<p>&#149; <a href="#/course-review">Course Review</a></p>
+					<p>&#149; <a href="#/final-presentations">Final Presentations</a></p> -->
+				</section>
+
+				<section class="title" id="demo">
+					<h1>Demo: Alphabet Transitioned</h1>
+					<p><a target="_" href="https://codepen.io/jkeohan/full/wWJvey/">D3 - Alphabet Demo</a></p>
+				</section>
+
+				<section class="title" id="buildingBlocks">
+					<h1>Basic Building Blocks</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Basic Building Blocks</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">Basic Building Blocks Include:</p>
+					<ul>
+						<li class="fragment red">svg (scaleable vector graphic)</li>
+						<span class="fragment">- used for drawing elements such as: rect, circle, text</span>
+						<li class="fragment red">g (group)</li>
+						<span class="fragment">- used to group svg elements</span>
+						<li class="fragment red">shapes (rect, circle, ellipse, line)
+		</li>
+						<span class="fragment">- used for things like bar charts, ect..</span>
+					</ul>
+				<!-- 	<p class="fragment">I'm assuming most people present have heard of <span class="red">REACT</span> so I don't have any slides on what React is...</p> -->
+				</section>
+
+				<section class="title" id="course-recap">
+					<h1>Must Know Methods</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Must Know Methods For Creating Elements</div>
+					<!-- <div class="pad-left-lg"> -->
+				<p class="fragment">Must Know Methods Include:</p>
+					<ul>
+						<li class="fragment red">d3.select()</li>
+						<span class="fragment">- used to select one element</span>
+						<li class="fragment red">d3.selectAll()</li>
+						<span class="fragment">- used to select multiple elements</span>
+						<li class="fragment red">d3.append()</li>
+						<span class="fragment">- used to append an element</span>
+						<li class="fragment red">d3.attr()</li>
+						<span class="fragment">- used to add properties to an element</span>
+					</ul>
+				</section>
+
+				<section class="title" id="">
+					<h1>Step 1: Inital Setup</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+				<div class="heading">Step 1: Inital Setup</div>
+					<!-- <div class="pad-left-lg"> -->
+				<p class="fragment">Initial Setup Includes:</p>
+					<ul>
+						<li class="fragment red">Creating an SVG element</li>
+<pre class="fragment"><code>const svg = d3.select("body").append('svg').attr("width",1000).attr("height",400)</code></pre>
+						<li class="fragment red">Append a g element</li>
+<pre class="fragment"><code>const g = svg.append('g').attr("transform","translate(50,200)")</code></pre>
+						<li class="fragment red">And lastly we need some letters to play with.</li>
+<pre class="fragment"><code>const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");</code></pre>
+					</ul>
+				</section>
+
+				<section class="title" id="">
+					<h1>Step 2: Binding and rendering data</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Step 2: Binding and rendering data</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">One of the most power set of tools that D3 offers is the ability to bind to data using <span class="red">.data()</span></p>
+					<pre class="fragment"><code>  const text = g.selectAll("text").data(data,function(d){ return d;})</code></pre>
+					<p class="fragment">Now we use <span class="red">.enter()</span> to render, position and style the data within a text element</p>
+					<pre class="fragment"><code>  text.enter().append("text")
+   .attr("x",function(d,i) { return i * 50;})
+   .attr("y",0).text(function(d) { return d; })
+   .attr("fill","green")
+   .style("font-size","40px")
+   </code></pre>
+				</section>
+
+
+			<section class="title" id="">
+					<h1>Step 3: Transitioning Data in and Out</h1>
+				</section>
+
+				<section data-background="#FFF" class="text-left">
+					<div class="heading">Step 3: Transitioning Data in and Out</div>
+					<!-- <div class="pad-left-lg"> -->
+					<p class="fragment">D3 provides two additional methods to control which elements should be updated and removed</p>
+					<pre class="fragment"><code>  const text = g.selectAll("text").data(data,function(d){ return d;})</code></pre>
+					<p class="fragment">Now we use <span class="red">.enter()</span> to render, position and style the data within a text element</p>
+					<pre class="fragment"><code>  text.enter().append("text")
+   .attr("x",function(d,i) { return i * 50;})
+   .attr("y",0).text(function(d) { return d; })
+   .attr("fill","green")
+   .style("font-size","40px")
+   </code></pre>
+				</section>
+
+					<section class="title" id="">
+					<h1>The End....</h1>
+				</section>
+
+				<!-- THE END -->
+				<section class="center">
+					<img src="img/main/the-end.jpg">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+
